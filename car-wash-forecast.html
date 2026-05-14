@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Wash Forecast — Should I Wash My Car Today?</title>
+  <meta name="description" content="Real-time car wash weather forecast. Check rain probability, dust, wind & humidity before washing your car. Free 7-day car wash forecast for any city worldwide." />
+  <meta name="keywords" content="car wash forecast, should I wash my car today, car wash weather, best day to wash car, car wash rain check" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://carwashforecast.com/" />
+
+  <link rel="alternate" hreflang="en" href="https://carwashforecast.com/en/" />
+  <link rel="alternate" hreflang="ar" href="https://carwashforecast.com/ar/" />
+  <link rel="alternate" hreflang="fr" href="https://carwashforecast.com/fr/" />
+  <link rel="alternate" hreflang="es" href="https://carwashforecast.com/es/" />
+  <link rel="alternate" hreflang="de" href="https://carwashforecast.com/de/" />
+  <link rel="alternate" hreflang="tr" href="https://carwashforecast.com/tr/" />
+  <link rel="alternate" hreflang="pt" href="https://carwashforecast.com/pt/" />
+  <link rel="alternate" hreflang="id" href="https://carwashforecast.com/id/" />
+  <link rel="alternate" hreflang="ru" href="https://carwashforecast.com/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://carwashforecast.com/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://carwashforecast.com/ja/" />
+  <link rel="alternate" hreflang="hi" href="https://carwashforecast.com/hi/" />
+  <link rel="alternate" hreflang="x-default" href="https://carwashforecast.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://carwashforecast.com/" />
+  <meta property="og:title" content="Car Wash Forecast — Should I Wash My Car Today?" />
+  <meta property="og:description" content="Check if today is the right time to wash your car. Real-time rain, dust & wind analysis for any city." />
+  <meta property="og:image" content="https://carwashforecast.com/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Car Wash Forecast — Should I Wash My Car Today?" />
+  <meta name="twitter:description" content="Free real-time car wash weather forecast. Avoid wasting money washing before rain!" />
+
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#3b82f6" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Car Wash Forecast" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Car Wash Forecast",
+    "alternateName": "توقعات غسيل السيارة",
+    "url": "https://carwashforecast.com",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Any modern browser",
+    "description": "Real-time weather-based car wash timing tool. Analyzes rain, dust, wind, and humidity to tell you the perfect time to wash your car.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "availableLanguage": ["Arabic","English","French","Spanish","German","Turkish","Portuguese","Indonesian","Russian","Chinese","Japanese","Hindi"],
+    "featureList": [
+      "Real-time weather analysis",
+      "7-day car wash forecast",
+      "Sandstorm & dust detection",
+      "Best day recommendation",
+      "GPS-based location detection",
+      "12 language support"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+
+  <style>
+    :root, [data-theme="light"] {
+      --font-display: 'Plus Jakarta Sans', 'Helvetica Neue', sans-serif;
+      --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+      --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem;
+      --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem;
+      --color-primary: oklch(0.52 0.17 230);
+      --color-primary-hover: oklch(0.42 0.17 230);
+      --color-primary-highlight: oklch(0.94 0.04 230);
+      --color-yes: oklch(0.62 0.17 145);
+      --color-yes-bg: oklch(0.97 0.03 145);
+      --color-wait: oklch(0.68 0.16 75);
+      --color-wait-bg: oklch(0.97 0.03 75);
+      --color-no: oklch(0.55 0.18 25);
+      --color-no-bg: oklch(0.97 0.03 25);
+      --color-caution: oklch(0.70 0.15 55);
+      --color-caution-bg: oklch(0.97 0.03 55);
+      --color-surface-dynamic: rgba(0,0,0,0.1);
+      --radius-sm: 0.375rem; --radius-md: 0.5rem;
+      --radius-lg: 0.75rem; --radius-xl: 1rem;
+      --radius-2xl: 1.5rem; --radius-full: 9999px;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --content-narrow: 640px;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: var(--font-body);
+      line-height: 1.5; font-size: var(--text-base);
+      min-height: 100vh;
+      transition: background 0.6s ease, color 0.6s ease;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    
+    body.theme-clear { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); color: #1a2332; }
+    body.theme-snow { background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); color: #1a2332; }
+    body.theme-rain { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: #ffffff; }
+    body.theme-dust { background: linear-gradient(135deg, #b87333 0%, #8b4513 100%); color: #ffffff; }
+    body.theme-night { background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: #ffffff; }
+    
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+    button, input, select { font-family: inherit; font-size: inherit; }
+    
+    .particles { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; overflow: hidden; pointer-events: none; }
+    .particle { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.12; background-color: var(--verdict-color, var(--color-yes)); animation: float ease-in-out infinite alternate; }
+    .particle:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 20%; animation-duration: 20s; }
+    .particle:nth-child(2) { width: 400px; height: 400px; top: 60%; left: 70%; animation-duration: 25s; }
+    .particle:nth-child(3) { width: 250px; height: 250px; top: 40%; left: -10%; animation-duration: 18s; }
+    .particle:nth-child(4) { width: 350px; height: 350px; top: -10%; left: 80%; animation-duration: 22s; }
+    @keyframes float { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(100px, 50px) scale(1.2); } }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    }
+    body.theme-rain .glass-card, body.theme-dust .glass-card, body.theme-night .glass-card {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .app-container { max-width: var(--content-narrow); margin: 0 auto; padding: var(--space-4); min-height: 100vh; display: flex; flex-direction: column; }
+    
+    header { display: flex; justify-content: space-between; align-items: center; padding: var(--space-4) 0; }
+    .logo-area { display: flex; align-items: center; gap: var(--space-2); color: inherit; }
+    .logo-area h1 { font-size: var(--text-lg); font-weight: 800; color: inherit; }
+    .header-actions { display: flex; gap: var(--space-2); align-items: center; }
+    
+    button { background: none; border: none; cursor: pointer; color: inherit; transition: var(--transition-interactive); }
+    .icon-btn { padding: var(--space-2); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+    .icon-btn:hover { background: rgba(255,255,255,0.1); }
+    .btn-primary { background-color: var(--verdict-color, var(--color-primary)); color: white; padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); transition: background-color 0.3s ease; text-shadow: none; border: none; }
+    
+    .location-bar { display: flex; justify-content: space-between; align-items: center; padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-6); }
+    
+    .weather-ill-container { display: flex; justify-content: center; margin-bottom: var(--space-4); }
+    .weather-svg { width: 180px; height: 180px; }
+    @media(min-width: 768px) { .weather-svg { width: 240px; height: 240px; } }
+    @keyframes rotate { 100% { transform: rotate(360deg); } }
+    .sun-rays { transform-origin: 50px 50px; animation: rotate 10s linear infinite; }
+    @keyframes fall { 0% { transform: translateY(0) translateX(0); opacity: 1; } 100% { transform: translateY(20px) translateX(-10px); opacity: 0; } }
+    .rain-drops line { animation: fall 1s linear infinite; }
+    .rain-drops line:nth-child(2) { animation-delay: 0.3s; }
+    .rain-drops line:nth-child(3) { animation-delay: 0.6s; }
+    @keyframes drift { 0% { transform: translateX(0); opacity: 0.5; } 50% { opacity: 1; } 100% { transform: translateX(20px); opacity: 0.5; } }
+    .dust-lines line { animation: drift 2s ease-in-out infinite alternate; }
+    .dust-lines line:nth-child(2) { animation-delay: 0.5s; }
+    .dust-lines line:nth-child(3) { animation-delay: 1s; }
+    @keyframes snow { 0% { transform: translateY(0) translateX(0); opacity: 1; } 100% { transform: translateY(20px) translateX(-10px); opacity: 0; } }
+    .snow-flakes circle { animation: snow 2s linear infinite; }
+    .snow-flakes circle:nth-child(2) { animation-delay: 0.7s; }
+    .snow-flakes circle:nth-child(3) { animation-delay: 1.4s; }
+    
+    .hero-card { border-radius: var(--radius-2xl); padding: var(--space-6); margin-bottom: var(--space-6); position: relative; overflow: hidden; text-align: center; }
+    .verdict-title { font-size: var(--text-xl); font-weight: 800; margin-bottom: var(--space-2); display: flex; justify-content: center; align-items: center; gap: var(--space-2); }
+    
+    .score-container { margin: var(--space-4) 0 var(--space-6); }
+    .score-label { font-size: var(--text-sm); font-weight: 600; opacity: 0.8; margin-bottom: var(--space-1); }
+    .score-wrapper { display: flex; align-items: baseline; justify-content: center; gap: var(--space-2); }
+    .score-value { font-size: clamp(5rem, 12vw, 8rem) !important; font-weight: 800; font-family: var(--font-display); line-height: 1; display: inline-block; }
+    .score-max { font-size: clamp(1.5rem, 3.6vw, 2.4rem); opacity: 0.8; font-weight: 800; }
+    .score-bar-bg { background: rgba(0,0,0,0.1); height: 12px; border-radius: var(--radius-full); overflow: hidden; margin-top: var(--space-2); width: 100%; border: 1px solid rgba(255,255,255,0.1); }
+    body.theme-rain .score-bar-bg, body.theme-dust .score-bar-bg, body.theme-night .score-bar-bg { background: rgba(255,255,255,0.1); }
+    .score-bar-fill { height: 100%; width: 0%; transition: width 1s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s; }
+    
+    .weather-brief { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4); margin-bottom: var(--space-6); font-weight: 600; font-size: var(--text-sm); opacity: 0.9; }
+    .weather-brief span { display: flex; align-items: center; gap: var(--space-2); }
+    .hero-actions { display: flex; justify-content: center; gap: var(--space-4); }
+    
+    .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-bottom: var(--space-6); }
+    .risk-card { padding: var(--space-4); border-radius: var(--radius-lg); text-align: left; }
+    .risk-title { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); font-weight: 600; opacity: 0.8; margin-bottom: var(--space-2); }
+    .risk-val { font-size: var(--text-lg); font-weight: 800; font-family: var(--font-display); margin-bottom: var(--space-1); }
+    .risk-level { font-size: var(--text-xs); font-weight: 700; padding: 2px 6px; border-radius: var(--radius-sm); display: inline-block; text-shadow: none; }
+    .level-low { background: var(--color-yes-bg); color: var(--color-yes); }
+    .level-med { background: var(--color-caution-bg); color: var(--color-caution); }
+    .level-high { background: var(--color-wait-bg); color: var(--color-wait); }
+    .level-ext { background: var(--color-no-bg); color: var(--color-no); }
+    
+    .forecast-strip { display: flex; gap: var(--space-3); overflow-x: auto; padding-bottom: var(--space-4); margin-bottom: var(--space-6); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .forecast-strip::-webkit-scrollbar { display: none; }
+    .day-card { min-width: 80px; padding: var(--space-3); border-radius: var(--radius-lg); text-align: center; flex-shrink: 0; }
+    .day-name { font-weight: 600; font-size: var(--text-sm); opacity: 0.8; margin-bottom: var(--space-2); }
+    .day-icon { font-size: var(--text-lg); margin-bottom: var(--space-1); }
+    .day-temp { font-weight: 700; font-size: var(--text-sm); margin-bottom: var(--space-2); opacity: 0.9; }
+    .day-score { font-weight: 800; font-family: var(--font-display); }
+    
+    .best-day-card { padding: var(--space-6); border-radius: var(--radius-xl); margin-bottom: var(--space-6); }
+    .survival-bar { margin-top: var(--space-4); }
+    .timeline { display: flex; height: 32px; border-radius: var(--radius-full); overflow: hidden; margin-top: var(--space-2); font-weight: 600; font-size: 12px; line-height: 32px; background: rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1); }
+    body.theme-rain .timeline, body.theme-dust .timeline, body.theme-night .timeline { background: rgba(255,255,255,0.1); }
+    .clean-zone { background: var(--color-yes); color: white; text-align: center; white-space: nowrap; overflow: hidden; transition: width 1s cubic-bezier(0.16, 1, 0.3, 1); padding: 0 var(--space-2); text-shadow: none; }
+    .risk-zone { color: inherit; opacity: 0.8; text-align: center; white-space: nowrap; overflow: hidden; transition: width 1s; padding: 0 var(--space-2); }
+    
+    .regional-tip { padding: var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-6); font-size: var(--text-sm); display: flex; gap: var(--space-3); align-items: flex-start; }
+    
+    .ad-container { width: 100%; text-align: center; padding: var(--space-4) 0; border-radius: var(--radius-lg); margin-block: var(--space-8); min-height: 90px; border: 2px dashed rgba(255,255,255,0.4); position: relative; overflow: hidden; background: transparent; }
+    body.theme-clear .ad-container, body.theme-snow .ad-container { border-color: rgba(0,0,0,0.2); }
+    .ad-container::before { content: "Advertisement"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; z-index: -1; }
+    body.theme-clear .ad-container::before, body.theme-snow .ad-container::before { color: rgba(0,0,0,0.4); }
+    body.theme-rain .ad-container::before, body.theme-dust .ad-container::before, body.theme-night .ad-container::before { color: rgba(255,255,255,0.4); }
+    
+    .ad-sticky-footer { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; display: none; padding: var(--space-2); margin-block: 0; border-radius: 0; border: none; backdrop-filter: blur(16px); background: rgba(255,255,255,0.1); }
+    @media (max-width: 768px) {
+      .ad-sticky-footer { display: block; }
+      body { padding-bottom: 90px; }
+      .risk-grid { grid-template-columns: 1fr; }
+    }
+    
+    footer { margin-top: auto; padding: var(--space-6) 0; border-top: 1px solid rgba(255,255,255,0.2); opacity: 0.8; font-size: var(--text-sm); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); }
+    footer a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
+    footer a:hover { opacity: 1; }
+    
+    .loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; transition: opacity 0.5s; background: var(--color-surface-offset); text-shadow: none; }
+    .loading-overlay * { color: var(--color-text); }
+    .car-loader { width: 80px; height: 35px; border-radius: 15px 15px 5px 5px; background: var(--color-primary); position: relative; margin-bottom: var(--space-6); animation: bounce 1s infinite alternate; }
+    .car-loader::before, .car-loader::after { content: ''; position: absolute; bottom: -8px; width: 16px; height: 16px; background: var(--color-text); border-radius: 50%; }
+    .car-loader::before { left: 8px; }
+    .car-loader::after { right: 8px; }
+    .water-drop { position: absolute; width: 8px; height: 8px; background: var(--color-yes); border-radius: 50%; animation: splash 1s infinite; }
+    @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-8px); } }
+    @keyframes splash { 0% { transform: translateY(-10px) scale(1); opacity: 1; } 100% { transform: translateY(20px) scale(0); opacity: 0; } }
+    
+    .hidden { display: none !important; }
+    
+    .search-input { flex: 1; padding: var(--space-3) var(--space-4); border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-full); background: rgba(255,255,255,0.2); color: inherit; outline: none; transition: background 0.2s; min-height: 44px; text-shadow: inherit; }
+    .search-input::placeholder { color: inherit; opacity: 0.7; }
+    .search-input:focus { background: rgba(255,255,255,0.3); }
+    
+    [dir="rtl"] .forecast-strip { flex-direction: row; }
+  </style>
+</head>
+<body class="theme-clear">
+
+  <div class="particles">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+  </div>
+
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="car-loader">
+      <div class="water-drop" style="top:-15px; left:10px; animation-delay:0s;"></div>
+      <div class="water-drop" style="top:-25px; left:40px; animation-delay:0.3s;"></div>
+      <div class="water-drop" style="top:-10px; left:60px; animation-delay:0.6s;"></div>
+    </div>
+    <div id="loading-text" data-i18n="location_detecting" style="font-size:var(--text-lg); font-weight:600; opacity:0.8;">Detecting your location...</div>
+  </div>
+
+  <div class="app-container">
+    <header>
+      <div class="logo-area">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Car Wash Forecast logo" style="width:28px; height:28px;">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 12 2 12 2C12 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
+          <path d="M7 13l3 3 7-7" stroke-width="2.5" />
+        </svg>
+        <h1 data-i18n="app_name">Car Wash Forecast</h1>
+      </div>
+      <div class="header-actions">
+        <select id="lang-switcher" onchange="changeLanguage(this.value)" aria-label="Language Switcher" style="background:transparent; border:none; color:inherit; font-weight:600; cursor:pointer; min-height:44px; padding:0 var(--space-2); text-shadow:inherit;">
+          <option value="en" style="color:black">EN</option>
+          <option value="ar" style="color:black">AR</option>
+          <option value="fr" style="color:black">FR</option>
+          <option value="es" style="color:black">ES</option>
+          <option value="de" style="color:black">DE</option>
+          <option value="tr" style="color:black">TR</option>
+        </select>
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg id="theme-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="location-bar glass-card">
+        <div style="display:flex; align-items:center; gap:var(--space-2); font-weight:600;">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span id="current-city-name" data-i18n="location_detecting">Detecting your location...</span>
+        </div>
+        <button class="icon-btn" onclick="toggleSearch()" title="Change location" aria-label="Change location">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+        </button>
+      </div>
+
+      <div id="search-container" class="hidden" style="margin-bottom:var(--space-6);">
+        <div style="display:flex; gap:var(--space-2);">
+          <input type="text" id="city-search-input" class="search-input" placeholder="Search city..." aria-label="Search city">
+          <button class="btn-primary" style="background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.4);" onclick="searchCity()">Search</button>
+        </div>
+        <ul id="search-results" class="glass-card" style="list-style:none; margin-top:var(--space-2); display:none; overflow:hidden;"></ul>
+      </div>
+
+      <div id="dust-warning" class="hidden glass-card" style="background:rgba(255, 50, 50, 0.2); border-color:rgba(255, 50, 50, 0.4); padding:var(--space-4); margin-bottom:var(--space-4); text-align:center; font-weight:700;"></div>
+
+      <div class="hero-card glass-card" id="hero-card">
+        <div class="weather-ill-container" id="weather-ill-container"></div>
+        <h2 id="verdict-title" class="verdict-title">--</h2>
+        
+        <div class="score-container">
+          <div class="score-label" data-i18n="score_label">Wash Score</div>
+          <div class="score-wrapper">
+            <span id="score-value" class="score-value">0</span>
+            <span class="score-max">/100</span>
+          </div>
+          <div class="score-bar-bg">
+            <div id="score-bar-fill" class="score-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="weather-brief">
+          <span title="Max Temperature"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> <span id="brief-temp">--</span></span>
+          <span title="Wind Speed"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg> <span id="brief-wind">--</span></span>
+          <span title="Humidity"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> <span id="brief-hum">--</span></span>
+        </div>
+
+        <div class="hero-actions">
+          <button id="share-btn" class="btn-primary" onclick="shareResult()">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            <span data-i18n="share_btn">Share Result</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="ad-container ad-leaderboard" aria-label="Advertisement">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="risk-grid">
+        <div class="risk-card glass-card">
+          <div class="risk-title">🌧️ <span data-i18n="rain_label">Rain Risk</span></div>
+          <div class="risk-val" id="risk-rain-val">--</div>
+          <div class="risk-level level-low" id="risk-rain-level">--</div>
+        </div>
+        <div class="risk-card glass-card">
+          <div class="risk-title">💨 <span data-i18n="wind_label">Wind Speed</span></div>
+          <div class="risk-val" id="risk-wind-val">--</div>
+          <div class="risk-level level-low" id="risk-wind-level">--</div>
+        </div>
+        <div class="risk-card glass-card">
+          <div class="risk-title">🌫️ <span data-i18n="dust_label">Dust Level</span></div>
+          <div class="risk-val" id="risk-dust-val">--</div>
+          <div class="risk-level level-low" id="risk-dust-level">--</div>
+        </div>
+      </div>
+
+      <div class="forecast-strip" id="forecast-strip"></div>
+
+      <div class="ad-container ad-rectangle" aria-label="Advertisement" style="max-height: 120px; min-height: 120px;">
+        <ins class="adsbygoogle" style="display:block; width:100%; max-height:120px; margin:0 auto;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="best-day-card glass-card">
+        <h3 style="margin-bottom:var(--space-2); display:flex; gap:var(--space-2); align-items:center;">
+          ✨ <span id="best-day-title-wrapper"><span data-i18n="best_day_label">Best time to wash this week:</span> <span id="best-day-name" style="font-weight:800;">--</span></span>
+        </h3>
+        <p id="best-day-desc" style="opacity:0.8; margin-bottom:var(--space-4);">--</p>
+
+        <div class="survival-bar">
+          <div class="score-label" data-i18n="survival_label">Estimated clean window:</div>
+          <div class="timeline">
+            <div id="survival-clean" class="clean-zone" style="width: 0%">
+              <span id="survival-hours-text">0h</span>&nbsp;<span data-i18n="clean_hours">clean</span> ✓
+            </div>
+            <div id="survival-risk" class="risk-zone" style="width: 100%">
+              🌧️ <span data-i18n="rain_risk">Rain risk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="regional-tips-container"></div>
+
+      <section style="margin-top:var(--space-12); margin-bottom:var(--space-8);">
+        <h2 data-i18n="how_title" style="font-size:var(--text-lg); margin-bottom:var(--space-4);">How does it work?</h2>
+        <p data-i18n="how_desc" style="opacity:0.8;">
+          We analyze real-time weather data — rain probability, wind speed, dust levels, and humidity — to give you a precise recommendation for the best time to wash your car and save your money.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>&copy; <span id="year"></span> CarWashForecast.com</div>
+      <div style="display:flex; gap:var(--space-4);">
+        <a href="#" data-i18n="footer_about" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="#" data-i18n="footer_privacy" target="_blank" rel="noopener noreferrer">Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="ad-container ad-sticky-footer" aria-label="Advertisement">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <script>
+    const IP_API = `https://ipapi.co/json/`;
+    
+    const svgs = {
+      clear: `<svg class="weather-svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="20" fill="#FFD700"/><g class="sun-rays" stroke="#FFD700" stroke-width="4" stroke-linecap="round"><line x1="50" y1="10" x2="50" y2="20"/><line x1="50" y1="80" x2="50" y2="90"/><line x1="10" y1="50" x2="20" y2="50"/><line x1="80" y1="50" x2="90" y2="50"/><line x1="22" y1="22" x2="29" y2="29"/><line x1="71" y1="71" x2="78" y2="78"/><line x1="22" y1="78" x2="29" y2="71"/><line x1="71" y1="29" x2="78" y2="22"/></g></svg>`,
+      rain: `<svg class="weather-svg" viewBox="0 0 100 100"><path d="M 25 60 A 15 15 0 0 1 35 45 A 20 20 0 0 1 65 45 A 15 15 0 0 1 75 60 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/><g class="rain-drops" stroke="#63b3ed" stroke-width="4" stroke-linecap="round"><line x1="35" y1="65" x2="30" y2="85"/><line x1="50" y1="65" x2="45" y2="85"/><line x1="65" y1="65" x2="60" y2="85"/></g></svg>`,
+      dust: `<svg class="weather-svg" viewBox="0 0 100 100"><g class="dust-lines" stroke="currentColor" stroke-width="6" stroke-linecap="round"><line x1="20" y1="30" x2="80" y2="30"/><line x1="30" y1="50" x2="90" y2="50"/><line x1="10" y1="70" x2="70" y2="70"/></g></svg>`,
+      snow: `<svg class="weather-svg" viewBox="0 0 100 100"><path d="M30 50 C30 30, 70 30, 70 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><path d="M20 50 L80 50" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><g class="snow-flakes" fill="#ffffff"><circle cx="35" cy="65" r="3"/><circle cx="50" cy="70" r="3"/><circle cx="65" cy="65" r="3"/></g></svg>`,
+      night: `<svg class="weather-svg" viewBox="0 0 100 100"><path d="M50 20 A 30 30 0 1 0 80 50 A 20 20 0 0 1 50 20" fill="#f1f5f9"/></svg>`
+    };
+
+    const i18n = {
+      ar: {
+        app_name: "توقعات غسيل السيارة", tagline: "هل أغسل سيارتي اليوم؟",
+        verdict_yes: "اغسل سيارتك الآن! ✅", verdict_wait: "انتظر قليلاً ⏳", verdict_no: "لا تغسل الآن ⛔", verdict_caution: "قد تغسل، لكن انتبه 🟡",
+        score_label: "درجة الغسيل", best_day_label: "أفضل يوم للغسيل هذا الأسبوع:", best_day_suffix: "— يتبعه {n} أيام صافية",
+        survival_label: "ساعات النظافة المتوقعة:", rain_label: "خطر المطر", wind_label: "سرعة الرياح", dust_label: "مستوى الغبار", humidity_label: "الرطوبة",
+        loading: "نحلل الطقس فوق {city}...", location_detecting: "جارٍ تحديد موقعك...", location_change: "تغيير الموقع", share_btn: "شارك النتيجة",
+        low: "منخفض", medium: "متوسط", high: "مرتفع", extreme: "شديد",
+        tip_saudi_shamal: "⚠️ تحقق من تنبيهات رياح الشمال قبل الغسيل", tip_saudi_morning: "☀️ الغسيل الصباحي أفضل — يجف قبل غبار المساء",
+        tip_uk_salt: "🧂 ملح الطريق يتلف الطلاء — اغسل بعد كل تساقط للثلوج", tip_india_monsoon: "🌧️ موسم الرياح الموسمية — اغسل بعد توقف المطر",
+        tip_uae_humidity: "💧 الرطوبة العالية في المساء قد تترك بقع ماء — اغسل صباحاً", tip_kuwait_summer: "☀️ تجنب الغسيل في شمس الظهيرة الحارقة", tip_de_winter: "❄️ Straßen salz beschädigt den Lack — nach Schnee waschen",
+        days: ["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"],
+        how_title: "كيف يعمل الموقع؟", how_desc: "نحلل بيانات الطقس الفورية — المطر والرياح والغبار والرطوبة — لنعطيك توصية دقيقة لأفضل وقت لغسيل سيارتك وتوفير وقتك ومالك.",
+        footer_about: "عن الموقع", footer_privacy: "الخصوصية", clean_hours: "ساعة نظيفة", rain_risk: "خطر المطر",
+        dust_warning: "⚠️ تحذير: مستوى غبار شديد — لا تغسل حتى يتحسن الطقس",
+        no_window: "⛔ لا يوجد يوم مناسب للغسيل هذا الأسبوع"
+      },
+      en: {
+        app_name: "Car Wash Forecast", tagline: "Should I wash my car today?",
+        verdict_yes: "Wash Your Car Now! ✅", verdict_wait: "Wait a Bit ⏳", verdict_no: "Don't Bother ⛔", verdict_caution: "Maybe, Check First 🟡",
+        score_label: "Wash Score", best_day_label: "Best day to wash this week:", best_day_suffix: "— followed by {n} clear days",
+        survival_label: "Estimated clean window:", rain_label: "Rain Risk", wind_label: "Wind Speed", dust_label: "Dust Level", humidity_label: "Humidity",
+        loading: "Analyzing skies over {city}...", location_detecting: "Detecting your location...", location_change: "Change location", share_btn: "Share Result",
+        low: "Low", medium: "Medium", high: "High", extreme: "Extreme",
+        tip_saudi_shamal: "⚠️ Check Shamal wind alerts before washing", tip_saudi_morning: "☀️ Morning wash is best — dries before evening dust",
+        tip_uk_salt: "🧂 Road salt damages paint — wash after every snowfall", tip_india_monsoon: "🌧️ Monsoon season — wash after rain stops, not before",
+        tip_uae_humidity: "💧 High evening humidity can cause water spots — wash in the morning", tip_kuwait_summer: "☀️ Avoid washing in direct midday sun to prevent spots", tip_de_winter: "❄️ Road salt damages paint — wash after snowfall",
+        days: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+        how_title: "How does it work?", how_desc: "We analyze real-time weather data — rain probability, wind speed, dust levels, and humidity — to give you a precise recommendation for the best time to wash your car and save your money.",
+        footer_about: "About", footer_privacy: "Privacy", clean_hours: "clean", rain_risk: "Rain risk",
+        dust_warning: "⚠️ Extreme dust warning — avoid washing your car until conditions improve",
+        no_window: "⛔ No good wash window this week — check back later"
+      }
+    };
+    i18n.fr = { ...i18n.en, app_name: "Prévision Lavage Auto", tagline: "Dois-je laver ma voiture aujourd'hui?", verdict_yes: "Lavez maintenant! ✅", verdict_wait: "Attendez ⏳", verdict_no: "Ne vous donnez pas la peine ⛔", score_label: "Score de lavage" };
+    i18n.es = { ...i18n.en, app_name: "Pronóstico Lavado Auto", tagline: "¿Debo lavar mi coche hoy?", verdict_yes: "¡Lava ahora! ✅", verdict_wait: "Espera ⏳", verdict_no: "No te molestes ⛔", score_label: "Puntuación de lavado" };
+    i18n.de = { ...i18n.en, app_name: "Autowäsche Vorhersage", tagline: "Soll ich mein Auto heute waschen?", verdict_yes: "Auto jetzt waschen! ✅", verdict_wait: "Noch etwas warten ⏳", verdict_no: "Nicht der Mühe wert ⛔", score_label: "Waschbewertung" };
+    i18n.tr = { ...i18n.en, app_name: "Araç Yıkama Tahmini", tagline: "Arabamı bugün yıkamalı mıyım?", verdict_yes: "Şimdi Yıkayın! ✅", verdict_wait: "Biraz Bekleyin ⏳", verdict_no: "Zahmet Etmeyin ⛔", score_label: "Yıkama Puanı" };
+
+    const regionalRules = {
+      'SA': { tipKey: 'tip_saudi_shamal' }, 'AE': { tipKey: 'tip_uae_humidity' },
+      'KW': { tipKey: 'tip_kuwait_summer' }, 'GB': { tipKey: 'tip_uk_salt' },
+      'DE': { tipKey: 'tip_de_winter' }, 'IN': { tipKey: 'tip_india_monsoon' }
+    };
+
+    let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    let currentLang = navigator.language.split('-')[0];
+    if (!i18n[currentLang]) currentLang = 'en';
+    let isRTL = currentLang === 'ar';
+    let weatherData = null;
+    let airData = null;
+    let currentCity = '';
+    let currentCountryCode = '';
+
+    document.getElementById('year').innerText = new Date().getFullYear();
+    document.getElementById('lang-switcher').value = currentLang;
+    applyTranslations();
+    updateThemeIcon();
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(()=>{}); });
+    }
+
+    detectLocation();
+
+    function applyTranslations() {
+      isRTL = currentLang === 'ar';
+      document.documentElement.setAttribute('lang', currentLang);
+      document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+      
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[currentLang] && i18n[currentLang][key]) {
+          el.innerHTML = i18n[currentLang][key];
+        }
+      });
+      document.title = `${i18n[currentLang].app_name} — ${i18n[currentLang].tagline}`;
+    }
+
+    function changeLanguage(lang) {
+      currentLang = lang;
+      applyTranslations();
+      if (weatherData) renderAll(weatherData, airData);
+    }
+
+    function toggleTheme() {
+      theme = theme === 'light' ? 'dark' : 'light';
+      updateThemeIcon();
+      if (weatherData) applyBackgroundTheme(weatherData.daily.precipitation_probability_max[0], airData?.hourly?.dust?.[12] || 0, weatherData.daily.weathercode[0]);
+    }
+
+    function updateThemeIcon() {
+      const icon = document.getElementById('theme-icon');
+      if (theme === 'dark') icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+      else icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+    }
+
+    async function detectLocation() {
+      showLoading();
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          async (pos) => await loadDataForLocation(pos.coords.latitude, pos.coords.longitude),
+          async () => await fallbackLocation(),
+          { timeout: 5000 }
+        );
+      } else await fallbackLocation();
+    }
+
+    async function fallbackLocation() {
+      try {
+        const res = await fetch(IP_API);
+        const data = await res.json();
+        if (data.latitude && data.longitude) await loadDataForLocation(data.latitude, data.longitude, data.city, data.country_code);
+        else { hideLoading(); document.getElementById('current-city-name').innerText = "Location access denied"; }
+      } catch (e) {
+        hideLoading(); document.getElementById('current-city-name').innerText = "Location detection failed";
+      }
+    }
+
+    async function getCityName(lat, lon) {
+      try {
+        const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&accept-language=${currentLang}`);
+        const data = await res.json();
+        return { city: data.address.city || data.address.town || data.address.village || data.address.county || "Unknown", country_code: data.address.country_code?.toUpperCase() || "" };
+      } catch(e) { return { city: "Unknown", country_code: "" }; }
+    }
+
+    async function loadDataForLocation(lat, lon, knownCity, knownCountry) {
+      try {
+        let city = knownCity; let country = knownCountry;
+        if (!city) { const geo = await getCityName(lat, lon); city = geo.city; country = geo.country_code; }
+        currentCity = city; currentCountryCode = country;
+        document.getElementById('current-city-name').innerText = city;
+
+        const wRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=precipitation_probability,windspeed_10m,relativehumidity_2m,visibility,weathercode&daily=weathercode,precipitation_sum,windspeed_10m_max,precipitation_probability_max,temperature_2m_max&timezone=auto&forecast_days=7`);
+        weatherData = await wRes.json();
+
+        try {
+          const aRes = await fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&hourly=dust,pm10&forecast_days=3`);
+          airData = await aRes.json();
+        } catch(e) {} 
+
+        renderAll(weatherData, airData);
+        setTimeout(hideLoading, 500);
+      } catch(e) { hideLoading(); alert("Failed to fetch weather data. Please try again."); }
+    }
+
+    function calculateWashScore(wData, aData) {
+      let score = 100;
+      const rain24h = wData.daily.precipitation_probability_max[0];
+      const rain48h = wData.daily.precipitation_probability_max[1];
+      const windSpeed = wData.daily.windspeed_10m_max[0];
+      const humidity = wData.hourly.relativehumidity_2m[12] || 50; 
+      const dustLevel = aData?.hourly?.dust?.[12] || 0;
+      const visibility = wData.hourly.visibility[12] || 10000;
+
+      if (rain48h > 50) score -= 20; else if (rain48h > 30) score -= 10;
+      if (windSpeed > 50) score -= 20; else if (windSpeed > 35) score -= 12; else if (windSpeed > 20) score -= 5;
+      if (humidity > 85) score -= 15; else if (humidity > 70) score -= 7;
+      if (visibility < 1000) score -= 20; else if (visibility < 5000) score -= 10;
+
+      let clearCount = 0;
+      for(let i=1; i<=3 && i<wData.daily.weathercode.length; i++) {
+        if(wData.daily.precipitation_probability_max[i] < 15) clearCount++;
+      }
+      score += clearCount * 8;
+      
+      // Strict Hard Caps
+      if (dustLevel > 600) score = Math.min(score, 5);
+      else if (dustLevel > 400) score = Math.min(score, 10);
+      else if (dustLevel > 200) score = Math.min(score, 25);
+      else if (dustLevel > 100) score -= 25; 
+      else if (dustLevel > 50) score -= 15;
+
+      if (rain24h > 70) score = Math.min(score, 10);
+      else if (rain24h > 50) score = Math.min(score, 25);
+      else if (rain24h > 30) score -= 30; 
+      else if (rain24h > 15) score -= 15;
+
+      if (humidity > 65) score = Math.min(score, 70);
+      if (rain24h > 30 || windSpeed > 35 || dustLevel > 100) score = Math.min(score, 64);
+
+      return Math.max(0, Math.min(100, Math.round(score)));
+    }
+
+    function applyBackgroundTheme(rain, dust, wCode) {
+      let weatherState = 'clear';
+      if (wCode >= 71 && wCode <= 77) weatherState = 'snow';
+      else if (dust > 200) weatherState = 'dust';
+      else if (rain > 50) weatherState = 'rain';
+
+      if (theme === 'dark') { 
+        document.body.className = 'theme-night'; 
+      } else {
+        document.body.className = `theme-${weatherState}`;
+      }
+      return weatherState;
+    }
+
+    function getWeatherEmoji(code) {
+      if(code === 0 || code === 1) return '☀️';
+      if(code === 2) return '⛅';
+      if(code === 3) return '☁️';
+      if(code >= 45 && code <= 48) return '🌫️';
+      if(code >= 51 && code <= 67) return '🌧️';
+      if(code >= 71 && code <= 77) return '❄️';
+      if(code >= 80 && code <= 82) return '🌦️';
+      if(code >= 85 && code <= 86) return '🌨️';
+      if(code >= 95) return '⛈️';
+      return '☀️';
+    }
+
+    function renderAll(wData, aData) {
+      const score = calculateWashScore(wData, aData);
+      renderVerdict(score, wData, aData);
+      const bestDayInfo = findBestDay(wData);
+      renderForecastStrip(bestDayInfo.scores, wData);
+      const cleanHours = calcSurvivalHours(bestDayInfo.bestDayIdx, wData);
+      renderBestDayCard(bestDayInfo, cleanHours, wData);
+      renderRiskCards(wData, aData);
+      renderRegionalTips(currentCountryCode);
+    }
+
+    function renderVerdict(score, wData, aData) {
+      const el = document.getElementById('score-value');
+      const bar = document.getElementById('score-bar-fill');
+      const titleEl = document.getElementById('verdict-title');
+      
+      const rain = wData.daily.precipitation_probability_max[0];
+      const dust = aData?.hourly?.dust?.[12] || 0;
+      const wCode = wData.daily.weathercode[0];
+      
+      const themeState = applyBackgroundTheme(rain, dust, wCode);
+      document.getElementById('weather-ill-container').innerHTML = svgs[themeState] || svgs.clear;
+
+      if (dust > 400) {
+        const w = document.getElementById('dust-warning');
+        w.classList.remove('hidden'); w.innerText = i18n[currentLang].dust_warning;
+      } else document.getElementById('dust-warning').classList.add('hidden');
+
+      let current = 0;
+      const interval = setInterval(() => {
+        current += 2;
+        if(current >= score) { current = score; clearInterval(interval); }
+        el.innerText = current;
+      }, 15);
+
+      bar.style.width = `${score}%`;
+
+      let color, title;
+      if (score >= 80) { color = 'var(--color-yes)'; title = i18n[currentLang].verdict_yes; }
+      else if (score >= 60) { color = 'var(--color-wait)'; title = i18n[currentLang].verdict_caution; }
+      else if (score >= 40) { color = 'var(--color-caution)'; title = i18n[currentLang].verdict_wait; }
+      else { color = 'var(--color-no)'; title = i18n[currentLang].verdict_no; }
+
+      bar.style.backgroundColor = color;
+      titleEl.innerText = title;
+      document.body.style.setProperty('--verdict-color', color);
+
+      document.getElementById('brief-temp').innerText = `${Math.round(wData.daily.temperature_2m_max[0])}°C`;
+      document.getElementById('brief-wind').innerText = `${Math.round(wData.daily.windspeed_10m_max[0])} km/h`;
+      document.getElementById('brief-hum').innerText = `${Math.round(wData.hourly.relativehumidity_2m[12])}%`;
+    }
+
+    function findBestDay(wData) {
+      let bestDayIdx = 0; let bestScore = -1; let scores = [];
+      for (let i = 0; i < 7; i++) {
+        let rain = wData.daily.precipitation_probability_max[i] || 0;
+        let wind = wData.daily.windspeed_10m_max[i] || 0;
+        let s = 100 - (rain * 0.8);
+        
+        if (wind > 50) s -= 20; else if (wind > 35) s -= 12; else if (wind > 20) s -= 5;
+        
+        if (rain > 70) s = Math.min(s, 20);
+        else if (rain > 50) s = Math.min(s, 40);
+        else if (rain > 30) s = Math.min(s, 64);
+        
+        s = Math.round(s);
+        scores.push(Math.max(0, s));
+        if (s > bestScore) { bestScore = s; bestDayIdx = i; }
+      }
+      return { bestDayIdx, bestScore, scores };
+    }
+
+    function calcSurvivalHours(startDayIdx, wData) {
+      let cleanHours = 0; let startHour = startDayIdx * 24 + 12; 
+      if (startHour >= 168) return 24; 
+      for(let i = startHour; i < 168; i++) {
+        if (wData.hourly.precipitation_probability[i] > 30 || wData.hourly.windspeed_10m[i] > 35) break;
+        cleanHours++;
+      }
+      return cleanHours;
+    }
+
+    function renderForecastStrip(scores, wData) {
+      const strip = document.getElementById('forecast-strip');
+      strip.innerHTML = ''; const today = new Date();
+      for (let i = 0; i < 7; i++) {
+        let d = new Date(today); d.setDate(d.getDate() + i);
+        let dayName = i18n[currentLang].days[d.getDay()];
+        let s = scores[i];
+        let code = wData.daily.weathercode[i];
+        let temp = Math.round(wData.daily.temperature_2m_max[i]);
+        let icon = getWeatherEmoji(code);
+
+        strip.innerHTML += `
+          <div class="day-card glass-card">
+            <div class="day-name">${dayName}</div>
+            <div class="day-icon">${icon}</div>
+            <div class="day-temp">${temp}°</div>
+            <div class="day-score">${s}</div>
+          </div>
+        `;
+      }
+    }
+
+    function renderBestDayCard(bestDayInfo, cleanHours, wData) {
+      const d = new Date(); d.setDate(d.getDate() + bestDayInfo.bestDayIdx);
+
+      let clearDays = 0;
+      for(let i = bestDayInfo.bestDayIdx + 1; i < 7; i++) {
+        if (wData.daily.precipitation_probability_max[i] < 20) clearDays++; else break;
+      }
+
+      let hasGoodWindow = false;
+      for (let i = 0; i < 7; i++) {
+         let c = 0;
+         for (let j = i + 1; j < 7; j++) {
+            if (wData.daily.precipitation_probability_max[j] < 20) c++; else break;
+         }
+         if (c >= 2) hasGoodWindow = true;
+      }
+
+      const titleWrapper = document.getElementById('best-day-title-wrapper');
+      const descEl = document.getElementById('best-day-desc');
+
+      if (!hasGoodWindow) {
+         titleWrapper.innerHTML = i18n[currentLang].no_window;
+         descEl.innerText = "";
+      } else {
+         titleWrapper.innerHTML = `<span data-i18n="best_day_label">${i18n[currentLang].best_day_label}</span> <span id="best-day-name" style="font-weight:800;">${i18n[currentLang].days[d.getDay()]}</span>`;
+         let suffixTemplate = i18n[currentLang].best_day_suffix || "";
+         descEl.innerText = suffixTemplate.replace('{n}', clearDays);
+      }
+
+      const cleanPct = Math.min(100, Math.max(0, (cleanHours / 168) * 100));
+      document.getElementById('survival-clean').style.width = `${cleanPct}%`;
+      document.getElementById('survival-risk').style.width = `${100 - cleanPct}%`;
+      document.getElementById('survival-hours-text').innerText = `${cleanHours}h`;
+    }
+
+    function getRiskLevel(val, low, med, high) {
+      if (val > high) return { text: i18n[currentLang].extreme, cls: 'level-ext' };
+      if (val > med) return { text: i18n[currentLang].high, cls: 'level-high' };
+      if (val > low) return { text: i18n[currentLang].medium, cls: 'level-med' };
+      return { text: i18n[currentLang].low, cls: 'level-low' };
+    }
+
+    function renderRiskCards(wData, aData) {
+      const rain = wData.daily.precipitation_probability_max[0];
+      const wind = wData.daily.windspeed_10m_max[0];
+      const dust = aData?.hourly?.dust?.[12] || 0;
+
+      document.getElementById('risk-rain-val').innerText = `${rain}%`;
+      document.getElementById('risk-wind-val').innerText = `${Math.round(wind)} km/h`;
+      document.getElementById('risk-dust-val').innerText = `${Math.round(dust)} µg/m³`;
+
+      const rLvl = getRiskLevel(rain, 15, 30, 50);
+      const wLvl = getRiskLevel(wind, 20, 35, 50);
+      const dLvl = getRiskLevel(dust, 50, 100, 200);
+
+      const rEl = document.getElementById('risk-rain-level');
+      const wEl = document.getElementById('risk-wind-level');
+      const dEl = document.getElementById('risk-dust-level');
+
+      rEl.className = `risk-level ${rLvl.cls}`; rEl.innerText = rLvl.text;
+      wEl.className = `risk-level ${wLvl.cls}`; wEl.innerText = wLvl.text;
+      dEl.className = `risk-level ${dLvl.cls}`; dEl.innerText = dLvl.text;
+    }
+
+    function renderRegionalTips(countryCode) {
+      const container = document.getElementById('regional-tips-container'); container.innerHTML = '';
+      const rule = regionalRules[countryCode];
+      if (rule && rule.tipKey && i18n[currentLang][rule.tipKey]) {
+        container.innerHTML = `<div class="regional-tip glass-card">${i18n[currentLang][rule.tipKey]}</div>`;
+      }
+    }
+
+    function toggleSearch() { document.getElementById('search-container').classList.toggle('hidden'); }
+
+    async function searchCity() {
+      const q = document.getElementById('city-search-input').value; if (!q) return;
+      const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(q)}&limit=5&accept-language=${currentLang}`);
+      const data = await res.json();
+      const list = document.getElementById('search-results'); list.innerHTML = ''; list.style.display = 'block';
+      data.forEach(item => {
+        const li = document.createElement('li'); li.style.padding = 'var(--space-2) var(--space-4)'; li.style.cursor = 'pointer'; li.style.borderBottom = '1px solid rgba(255,255,255,0.2)'; li.innerText = item.display_name;
+        li.onclick = () => { list.style.display = 'none'; toggleSearch(); showLoading(); loadDataForLocation(item.lat, item.lon, item.name, ''); };
+        list.appendChild(li);
+      });
+    }
+
+    async function shareResult() {
+      const verdict = document.getElementById('verdict-title').innerText; const score = document.getElementById('score-value').innerText;
+      const text = `🚗 Car Wash Forecast for ${currentCity}\n${verdict}\nWash Score: ${score}/100\n\nCheck yours: https://carwashforecast.com`;
+      if (navigator.share) { try { await navigator.share({ title: 'Car Wash Forecast', text, url: 'https://carwashforecast.com' }); } catch(e) {} }
+      else { await navigator.clipboard.writeText(text); alert('Copied to clipboard!'); }
+    }
+
+    function showLoading() { const el = document.getElementById('loading-overlay'); el.classList.remove('hidden'); el.style.opacity = '1'; }
+    function hideLoading() { const el = document.getElementById('loading-overlay'); el.style.opacity = '0'; setTimeout(() => el.classList.add('hidden'), 500); }
+  </script>
+</body>
+</html>
