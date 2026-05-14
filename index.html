@@ -223,10 +223,8 @@
     body.theme-clear .ad-container::before, body.theme-snow .ad-container::before { color: rgba(0,0,0,0.4); }
     body.theme-rain .ad-container::before, body.theme-dust .ad-container::before, body.theme-night .ad-container::before { color: rgba(255,255,255,0.4); }
     
-    .ad-sticky-footer { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; display: none; padding: var(--space-2); margin-block: 0; border-radius: 0; border: none; backdrop-filter: blur(16px); background: rgba(255,255,255,0.1); }
     @media (max-width: 768px) {
-      .ad-sticky-footer { display: block; }
-      body { padding-bottom: 65px; }
+      
       .risk-grid { grid-template-columns: 1fr; }
     }
     
@@ -423,11 +421,7 @@
     </footer>
   </div>
 
-  <div class="ad-container ad-sticky-footer" aria-label="Advertisement">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4045821311965688" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4045821311965688" data-ad-slot="4398118032" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
+  
 
   <script>
     const IP_API = `https://ipapi.co/json/`;
