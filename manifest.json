@@ -2,7 +2,7 @@
   "name": "Car Wash Forecast",
   "short_name": "CarWash",
   "description": "Should I wash my car today? Real-time weather-based car wash forecast.",
-  "start_url": "./car-wash-forecast.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0d1117",
   "theme_color": "#3b82f6",
