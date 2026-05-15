@@ -334,10 +334,14 @@
           <span title="Humidity"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> <span id="brief-hum">--</span></span>
         </div>
 
-        <div class="hero-actions">
-          <button id="share-btn" class="btn-primary" onclick="shareResult()">
-            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-            <span data-i18n="share_btn">Share Result</span>
+        <div class="hero-actions" style="display:flex; gap:var(--space-2); justify-content:center; flex-wrap:wrap;">
+          <button id="share-x-btn" class="btn-primary" style="background:#000; border:1px solid rgba(255,255,255,0.2);" onclick="shareOnX()">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span data-i18n="share_x">X (Twitter)</span>
+          </button>
+          <button id="share-wa-btn" class="btn-primary" style="background:#25D366; border:1px solid rgba(255,255,255,0.2);" onclick="shareOnWhatsApp()">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <span data-i18n="share_wa">WhatsApp</span>
           </button>
         </div>
       </div>
@@ -418,6 +422,54 @@
             <h3 data-i18n="article_3_title" style="margin-bottom:var(--space-3);">Does rain clean your car? The truth</h3>
             <div data-i18n="article_3_body" style="opacity:0.8; font-size:var(--text-sm); line-height:1.7;"></div>
           </article>
+        </div>
+      </section>
+
+      <section id="products" style="margin-top:var(--space-12); margin-bottom:var(--space-8);">
+        <h2 data-i18n="products_title" style="font-size:var(--text-lg); margin-bottom:var(--space-4);">Recommended Car Care Products</h2>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:var(--space-4);">
+          <!-- Car wash shampoo -->
+          <div class="glass-card" style="padding:var(--space-4); border-radius:var(--radius-lg); display:flex; flex-direction:column; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:var(--space-2);">🫧</div>
+            <h3 data-i18n="prod_shampoo" style="font-size:var(--text-base); margin-bottom:var(--space-2);">Car Wash Shampoo</h3>
+            <p data-i18n="prod_shampoo_desc" style="font-size:var(--text-sm); opacity:0.8; margin-bottom:var(--space-4); flex:1;">Premium suds for a scratch-free wash.</p>
+            <a href="#" onclick="openAmazon('/s?k=car+wash+shampoo&tag=iabufaisl-21'); return false;" class="btn-primary" style="text-decoration:none; width:100%;" data-i18n="buy_on_amazon">Buy on Amazon</a>
+          </div>
+          <!-- Microfiber towels -->
+          <div class="glass-card" style="padding:var(--space-4); border-radius:var(--radius-lg); display:flex; flex-direction:column; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:var(--space-2);">🧽</div>
+            <h3 data-i18n="prod_towels" style="font-size:var(--text-base); margin-bottom:var(--space-2);">Microfiber Towels</h3>
+            <p data-i18n="prod_towels_desc" style="font-size:var(--text-sm); opacity:0.8; margin-bottom:var(--space-4); flex:1;">Ultra-soft towels for streak-free drying.</p>
+            <a href="#" onclick="openAmazon('/s?k=microfiber+towels+car&tag=iabufaisl-21'); return false;" class="btn-primary" style="text-decoration:none; width:100%;" data-i18n="buy_on_amazon">Buy on Amazon</a>
+          </div>
+          <!-- Car wax polish -->
+          <div class="glass-card" style="padding:var(--space-4); border-radius:var(--radius-lg); display:flex; flex-direction:column; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:var(--space-2);">✨</div>
+            <h3 data-i18n="prod_wax" style="font-size:var(--text-base); margin-bottom:var(--space-2);">Car Wax Polish</h3>
+            <p data-i18n="prod_wax_desc" style="font-size:var(--text-sm); opacity:0.8; margin-bottom:var(--space-4); flex:1;">Long-lasting protection and high gloss shine.</p>
+            <a href="#" onclick="openAmazon('/s?k=car+wax+polish&tag=iabufaisl-21'); return false;" class="btn-primary" style="text-decoration:none; width:100%;" data-i18n="buy_on_amazon">Buy on Amazon</a>
+          </div>
+          <!-- Pressure washer -->
+          <div class="glass-card" style="padding:var(--space-4); border-radius:var(--radius-lg); display:flex; flex-direction:column; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:var(--space-2);">🔫</div>
+            <h3 data-i18n="prod_washer" style="font-size:var(--text-base); margin-bottom:var(--space-2);">Pressure Washer</h3>
+            <p data-i18n="prod_washer_desc" style="font-size:var(--text-sm); opacity:0.8; margin-bottom:var(--space-4); flex:1;">Effortlessly blast away dirt and grime.</p>
+            <a href="#" onclick="openAmazon('/s?k=pressure+washer+car&tag=iabufaisl-21'); return false;" class="btn-primary" style="text-decoration:none; width:100%;" data-i18n="buy_on_amazon">Buy on Amazon</a>
+          </div>
+          <!-- Car interior cleaner -->
+          <div class="glass-card" style="padding:var(--space-4); border-radius:var(--radius-lg); display:flex; flex-direction:column; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:var(--space-2);">🧹</div>
+            <h3 data-i18n="prod_interior" style="font-size:var(--text-base); margin-bottom:var(--space-2);">Interior Cleaner</h3>
+            <p data-i18n="prod_interior_desc" style="font-size:var(--text-sm); opacity:0.8; margin-bottom:var(--space-4); flex:1;">Keep your dashboard and seats spotless.</p>
+            <a href="#" onclick="openAmazon('/s?k=car+interior+cleaner&tag=iabufaisl-21'); return false;" class="btn-primary" style="text-decoration:none; width:100%;" data-i18n="buy_on_amazon">Buy on Amazon</a>
+          </div>
+          <!-- Wheel cleaner -->
+          <div class="glass-card" style="padding:var(--space-4); border-radius:var(--radius-lg); display:flex; flex-direction:column; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:var(--space-2);">🛞</div>
+            <h3 data-i18n="prod_wheel" style="font-size:var(--text-base); margin-bottom:var(--space-2);">Wheel Cleaner</h3>
+            <p data-i18n="prod_wheel_desc" style="font-size:var(--text-sm); opacity:0.8; margin-bottom:var(--space-4); flex:1;">Dissolve brake dust for shiny rims.</p>
+            <a href="#" onclick="openAmazon('/s?k=wheel+cleaner&tag=iabufaisl-21'); return false;" class="btn-primary" style="text-decoration:none; width:100%;" data-i18n="buy_on_amazon">Buy on Amazon</a>
+          </div>
         </div>
       </section>
 
@@ -554,7 +606,15 @@
         privacy_body: "نحن نحترم خصوصيتك. نستخدم موقع جهازك فقط لتوفير توقعات طقس دقيقة. لا نقوم بتخزين أو مشاركة موقعك الدقيق مع أي طرف ثالث. باستخدامك الخدمة، توافق على استخدام بيانات الموقع للأداء وشبكات الإعلانات.",
         footer_about: "عن الموقع", footer_privacy: "الخصوصية", clean_hours: "ساعة نظيفة", rain_risk: "خطر المطر",
         dust_warning: "⚠️ تحذير: مستوى غبار شديد — لا تغسل حتى يتحسن الطقس",
-        no_window: "⛔ لا يوجد يوم مناسب للغسيل هذا الأسبوع"
+        no_window: "⛔ لا يوجد يوم مناسب للغسيل هذا الأسبوع",
+        share_x: "إكس (تويتر)", share_wa: "واتساب", products_title: "منتجات العناية بالسيارات الموصى بها",
+        prod_shampoo: "شامبو غسيل السيارات", prod_shampoo_desc: "رغوة ممتازة لغسيل بدون خدوش.",
+        prod_towels: "مناشف مايكروفايبر", prod_towels_desc: "مناشف فائقة النعومة لتجفيف بدون خطوط.",
+        prod_wax: "ملمع وشمع للسيارات", prod_wax_desc: "حماية طويلة الأمد ولمعان عالي.",
+        prod_washer: "آلة غسيل بالضغط", prod_washer_desc: "تزيل الأوساخ بسهولة وسرعة.",
+        prod_interior: "منظف داخلي", prod_interior_desc: "حافظ على لوحة القيادة والمقاعد نظيفة.",
+        prod_wheel: "منظف الإطارات", prod_wheel_desc: "يذيب غبار الفرامل لجنوط لامعة.",
+        buy_on_amazon: "شراء من أمازون"
       },
       en: {
         app_name: "Car Wash Forecast", tagline: "Should I wash my car today?",
@@ -589,7 +649,15 @@
         privacy_body: "We respect your privacy. CarWashForecast.com uses your device's location solely to provide accurate weather forecasts for your area. We do not store, track, or share your exact location data with any third parties. By using this service, you consent to our use of location data for functionality and our partner networks for personalized advertisements.",
         footer_about: "About", footer_privacy: "Privacy", clean_hours: "clean", rain_risk: "Rain risk",
         dust_warning: "⚠️ Extreme dust warning — avoid washing your car until conditions improve",
-        no_window: "⛔ No good wash window this week — check back later"
+        no_window: "⛔ No good wash window this week — check back later",
+        share_x: "X (Twitter)", share_wa: "WhatsApp", products_title: "Recommended Car Care Products",
+        prod_shampoo: "Car Wash Shampoo", prod_shampoo_desc: "Premium suds for a scratch-free wash.",
+        prod_towels: "Microfiber Towels", prod_towels_desc: "Ultra-soft towels for streak-free drying.",
+        prod_wax: "Car Wax Polish", prod_wax_desc: "Long-lasting protection and high gloss shine.",
+        prod_washer: "Pressure Washer", prod_washer_desc: "Effortlessly blast away dirt and grime.",
+        prod_interior: "Interior Cleaner", prod_interior_desc: "Keep your dashboard and seats spotless.",
+        prod_wheel: "Wheel Cleaner", prod_wheel_desc: "Dissolve brake dust for shiny rims.",
+        buy_on_amazon: "Buy on Amazon"
       }
     };
     i18n.fr = { ...i18n.en, app_name: "Prévision Lavage Auto", tagline: "Dois-je laver ma voiture aujourd'hui?", verdict_yes: "Lavez maintenant! ✅", verdict_wait: "Attendez ⏳", verdict_no: "Ne vous donnez pas la peine ⛔", score_label: "Score de lavage", how_title: "Comment ça marche ?", blog_title: "Conseils d'entretien automobile", partner_title: "Faites la promotion de votre station", privacy_title: "Politique de confidentialité",
@@ -601,7 +669,15 @@
       pkg_pro_badge: "POPULAIRE", pkg_pro_title: "Pro", pkg_pro_price: "79 €", pkg_featured_title: "En vedette", pkg_featured_price: "199 €",
       pkg_feature_1: "Annuaire local", pkg_feature_2: "Placement standard", pkg_feature_3: "Placement prioritaire", pkg_feature_4: "Lien vers votre site",
       pkg_feature_5: "Bannière", pkg_feature_6: "Sponsor de la ville", pkg_feature_7: "Tableau de bord", partner_cta: "Demander", featured_partners_title: "Partenaires en vedette",
-      privacy_body: "Nous respectons votre vie privée. Nous n'utilisons votre localisation que pour la météo. Aucune donnée n'est partagée."
+      privacy_body: "Nous respectons votre vie privée. Nous n'utilisons votre localisation que pour la météo. Aucune donnée n'est partagée.",
+      share_x: "X (Twitter)", share_wa: "WhatsApp", products_title: "Produits d'Entretien Automobile Recommandés",
+      prod_shampoo: "Shampoing Auto", prod_shampoo_desc: "Mousse premium pour un lavage sans rayures.",
+      prod_towels: "Serviettes en Microfibre", prod_towels_desc: "Serviettes ultra-douces pour un séchage sans traces.",
+      prod_wax: "Cire de Polish", prod_wax_desc: "Protection longue durée et brillance intense.",
+      prod_washer: "Nettoyeur Haute Pression", prod_washer_desc: "Éliminez la saleté et la crasse sans effort.",
+      prod_interior: "Nettoyant Intérieur", prod_interior_desc: "Gardez votre tableau de bord et vos sièges impeccables.",
+      prod_wheel: "Nettoyant Jantes", prod_wheel_desc: "Dissout la poussière de frein pour des jantes brillantes.",
+      buy_on_amazon: "Acheter sur Amazon"
     };
     i18n.es = { ...i18n.en, app_name: "Pronóstico Lavado Auto", tagline: "¿Debo lavar mi coche hoy?", verdict_yes: "¡Lava ahora! ✅", verdict_wait: "Espera ⏳", verdict_no: "No te molestes ⛔", score_label: "Puntuación de lavado", how_title: "¿Cómo funciona?", blog_title: "Consejos para cuidar su coche", partner_title: "Anuncie su autolavado", privacy_title: "Política de Privacidad",
       how_desc: "Analizamos datos meteorológicos en tiempo real para brindarle una recomendación precisa sobre el mejor momento para lavar su automóvil.",
@@ -612,7 +688,15 @@
       pkg_pro_badge: "POPULAR", pkg_pro_title: "Pro", pkg_pro_price: "79 €", pkg_featured_title: "Destacado", pkg_featured_price: "199 €",
       pkg_feature_1: "Directorio local", pkg_feature_2: "Ubicación estándar", pkg_feature_3: "Ubicación prioritaria", pkg_feature_4: "Enlace a su sitio web",
       pkg_feature_5: "Banner", pkg_feature_6: "Patrocinador exclusivo", pkg_feature_7: "Panel de análisis", partner_cta: "Consultar", featured_partners_title: "Socios destacados",
-      privacy_body: "Respetamos su privacidad. Utilizamos su ubicación únicamente para pronósticos. No compartimos sus datos con terceros."
+      privacy_body: "Respetamos su privacidad. Utilizamos su ubicación únicamente para pronósticos. No compartimos sus datos con terceros.",
+      share_x: "X (Twitter)", share_wa: "WhatsApp", products_title: "Productos Recomendados para el Cuidado del Coche",
+      prod_shampoo: "Champú para Coches", prod_shampoo_desc: "Espuma premium para un lavado sin rasguños.",
+      prod_towels: "Toallas de Microfibra", prod_towels_desc: "Toallas ultrasuaves para un secado sin marcas.",
+      prod_wax: "Cera Pulidora", prod_wax_desc: "Protección duradera y brillo intenso.",
+      prod_washer: "Hidrolimpiadora", prod_washer_desc: "Elimina la suciedad y la mugre sin esfuerzo.",
+      prod_interior: "Limpiador de Interiores", prod_interior_desc: "Mantén tu salpicadero y asientos impecables.",
+      prod_wheel: "Limpiallantas", prod_wheel_desc: "Disuelve el polvo de frenos para llantas brillantes.",
+      buy_on_amazon: "Comprar en Amazon"
     };
     i18n.de = { ...i18n.en, app_name: "Autowäsche Vorhersage", tagline: "Soll ich mein Auto heute waschen?", verdict_yes: "Auto jetzt waschen! ✅", verdict_wait: "Noch etwas warten ⏳", verdict_no: "Nicht der Mühe wert ⛔", score_label: "Waschbewertung", how_title: "Wie funktioniert es?", blog_title: "Autopflege-Tipps", partner_title: "Werben Sie für Ihre Autowäsche", privacy_title: "Datenschutzerklärung",
       how_desc: "Wir analysieren Echtzeit-Wetterdaten, um Ihnen eine genaue Empfehlung für den besten Zeitpunkt zum Autowaschen zu geben.",
@@ -623,7 +707,15 @@
       pkg_pro_badge: "BELIEBTEST", pkg_pro_title: "Pro", pkg_pro_price: "79 €", pkg_featured_title: "Empfohlen", pkg_featured_price: "199 €",
       pkg_feature_1: "Lokales Verzeichnis", pkg_feature_2: "Standardplatzierung", pkg_feature_3: "Vorrangige Platzierung", pkg_feature_4: "Link zur Website",
       pkg_feature_5: "Homepage-Banner", pkg_feature_6: "Stadtsponsor", pkg_feature_7: "Analyse-Dashboard", partner_cta: "Anfragen", featured_partners_title: "Ausgewählte Partner",
-      privacy_body: "Wir respektieren Ihre Privatsphäre. Wir nutzen Ihren Standort ausschließlich für Wetterdaten. Daten werden nicht geteilt."
+      privacy_body: "Wir respektieren Ihre Privatsphäre. Wir nutzen Ihren Standort ausschließlich für Wetterdaten. Daten werden nicht geteilt.",
+      share_x: "X (Twitter)", share_wa: "WhatsApp", products_title: "Empfohlene Autopflegeprodukte",
+      prod_shampoo: "Autoshampoo", prod_shampoo_desc: "Premium-Schaum für eine kratzfreie Wäsche.",
+      prod_towels: "Mikrofasertücher", prod_towels_desc: "Ultraweiche Tücher für streifenfreies Trocknen.",
+      prod_wax: "Autowachs-Politur", prod_wax_desc: "Langanhaltender Schutz und Hochglanz.",
+      prod_washer: "Hochdruckreiniger", prod_washer_desc: "Müheloses Entfernen von Schmutz und Dreck.",
+      prod_interior: "Innenraumreiniger", prod_interior_desc: "Halten Sie Armaturenbrett und Sitze makellos.",
+      prod_wheel: "Felgenreiniger", prod_wheel_desc: "Löst Bremsstaub für glänzende Felgen.",
+      buy_on_amazon: "Bei Amazon kaufen"
     };
     i18n.tr = { ...i18n.en, app_name: "Araç Yıkama Tahmini", tagline: "Arabamı bugün yıkamalı mıyım?", verdict_yes: "Şimdi Yıkayın! ✅", verdict_wait: "Biraz Bekleyin ⏳", verdict_no: "Zahmet Etmeyin ⛔", score_label: "Yıkama Puanı", how_title: "Nasıl çalışır?", blog_title: "Araç Bakım İpuçları", partner_title: "Oto Yıkamanızı Tanıtın", privacy_title: "Gizlilik Politikası",
       how_desc: "Gerçek zamanlı hava durumu verilerini analiz ederek aracınızı yıkamak için en iyi zamanı belirleriz.",
@@ -634,7 +726,15 @@
       pkg_pro_badge: "POPÜLER", pkg_pro_title: "Pro", pkg_pro_price: "79 ₺", pkg_featured_title: "Öne Çıkan", pkg_featured_price: "199 ₺",
       pkg_feature_1: "Yerel Dizin", pkg_feature_2: "Standart Yerleşim", pkg_feature_3: "Öncelikli Yerleşim", pkg_feature_4: "Web sitesi bağlantısı",
       pkg_feature_5: "Ana Sayfa Afişi", pkg_feature_6: "Özel Sponsor", pkg_feature_7: "Analitik Paneli", partner_cta: "İletişime Geç", featured_partners_title: "Öne Çıkan Ortaklar",
-      privacy_body: "Gizliliğinize saygı duyuyoruz. Konumunuzu yalnızca hava durumu için kullanırız. Verilerinizi kimseyle paylaşmayız."
+      privacy_body: "Gizliliğinize saygı duyuyoruz. Konumunuzu yalnızca hava durumu için kullanırız. Verilerinizi kimseyle paylaşmayız.",
+      share_x: "X (Twitter)", share_wa: "WhatsApp", products_title: "Önerilen Araç Bakım Ürünleri",
+      prod_shampoo: "Araç Yıkama Şampuanı", prod_shampoo_desc: "Çiziksiz bir yıkama için premium köpük.",
+      prod_towels: "Mikrofiber Havlular", prod_towels_desc: "Lekesiz kurulama için ultra yumuşak havlular.",
+      prod_wax: "Araç Cilası", prod_wax_desc: "Uzun ömürlü koruma ve yüksek parlaklık.",
+      prod_washer: "Basınçlı Yıkama Makinesi", prod_washer_desc: "Kir ve çamuru zahmetsizce temizler.",
+      prod_interior: "İç Temizleyici", prod_interior_desc: "Ön panelinizi ve koltuklarınızı tertemiz tutar.",
+      prod_wheel: "Jant Temizleyici", prod_wheel_desc: "Parlak jantlar için fren tozunu çözer.",
+      buy_on_amazon: "Amazon'dan Satın Al"
     };
 
     const regionalRules = {
@@ -1000,11 +1100,38 @@
       });
     }
 
-    async function shareResult() {
-      const verdict = document.getElementById('verdict-title').innerText; const score = document.getElementById('score-value').innerText;
-      const text = `🚗 Car Wash Forecast for ${currentCity}\n${verdict}\nWash Score: ${score}/100\n\nCheck yours: https://carwashforecast.com`;
-      if (navigator.share) { try { await navigator.share({ title: 'Car Wash Forecast', text, url: 'https://carwashforecast.com' }); } catch(e) {} }
-      else { await navigator.clipboard.writeText(text); alert('Copied to clipboard!'); }
+    const amazonStores = {
+      'ar': 'https://www.amazon.sa',
+      'en-US': 'https://www.amazon.com',
+      'en-GB': 'https://www.amazon.co.uk',
+      'fr': 'https://www.amazon.fr',
+      'de': 'https://www.amazon.de',
+      'tr': 'https://www.amazon.com.tr',
+      'es': 'https://www.amazon.es',
+      'it': 'https://www.amazon.it',
+      'ja': 'https://www.amazon.co.jp',
+      'default': 'https://www.amazon.com'
+    };
+
+    function openAmazon(path) {
+      let lang = navigator.language;
+      let storeUrl = amazonStores[lang] || amazonStores[lang.split('-')[0]] || amazonStores['default'];
+      window.open(storeUrl + path, '_blank');
+    }
+
+    function getShareText() {
+      const score = document.getElementById('score-value').innerText;
+      return `My Car Wash Score today is ${score}/100 🚗✨ Check yours at carwashforecast.com #CarWash #Weather`;
+    }
+
+    function shareOnX() {
+      const text = encodeURIComponent(getShareText());
+      window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+    }
+
+    function shareOnWhatsApp() {
+      const text = encodeURIComponent(getShareText());
+      window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
     }
 
     function showLoading() { const el = document.getElementById('loading-overlay'); el.classList.remove('hidden'); el.style.opacity = '1'; }
