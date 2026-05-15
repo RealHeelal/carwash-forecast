@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Wash Forecast — Should I Wash My Car Today?</title>
-  <meta name="description" content="Real-time car wash weather forecast. Check rain probability, dust, wind & humidity before washing your car. Free 7-day car wash forecast for any city worldwide." />
-  <meta name="keywords" content="car wash forecast, should I wash my car today, car wash weather, best day to wash car, car wash rain check" />
+  <title>Car Wash Forecast Madrid — Best Time to Wash Your Car</title>
+  <meta name="description" content="Check the real-time car wash forecast for Madrid. Find out the exact probability of rain, dust, and wind to know the best day to wash your car in Madrid." />
+  <meta name="keywords" content="car wash forecast Madrid, should I wash my car today Madrid, car wash weather Madrid, best day to wash car Madrid" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://carwashforcast.com/" />
+  <link rel="canonical" href="https://carwashforcast.com/madrid" />
 
   <link rel="alternate" hreflang="en" href="https://carwashforcast.com/en/" />
   <link rel="alternate" hreflang="ar" href="https://carwashforcast.com/ar/" />
@@ -24,14 +24,14 @@
   <link rel="alternate" hreflang="x-default" href="https://carwashforcast.com/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://carwashforcast.com/" />
-  <meta property="og:title" content="Car Wash Forecast — Should I Wash My Car Today?" />
-  <meta property="og:description" content="Check if today is the right time to wash your car. Real-time rain, dust & wind analysis for any city." />
+  <meta property="og:url" content="https://carwashforcast.com/madrid" />
+  <meta property="og:title" content="Car Wash Forecast Madrid — Should I Wash My Car Today?" />
+  <meta property="og:description" content="Check if today is the right time to wash your car in Madrid. Real-time rain and dust analysis tailored for your city." />
   <meta property="og:image" content="https://carwashforcast.com/og-image.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Car Wash Forecast — Should I Wash My Car Today?" />
-  <meta name="twitter:description" content="Free real-time car wash weather forecast. Avoid wasting money washing before rain!" />
+  <meta name="twitter:title" content="Car Wash Forecast Madrid — Should I Wash My Car Today?" />
+  <meta name="twitter:description" content="Free real-time car wash weather forecast for Madrid. Avoid wasting money washing before rain!" />
 
   <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#3b82f6" />
@@ -293,6 +293,16 @@
     </header>
 
     <main>
+
+      <section style="max-width:800px; margin:var(--space-8) auto 0 auto; padding:0 var(--space-4);">
+        <div class="glass-card" style="padding:var(--space-6); border-radius:var(--radius-xl);">
+          <h1 style="font-size:var(--text-xl); margin-bottom:var(--space-4);">Car Wash Forecast for Madrid</h1>
+          <p style="opacity:0.9; line-height: 1.8; font-size:var(--text-base);">
+            Welcome to the Madrid car wash forecast! As a city with a Mediterranean climate transitioning into semi-arid, Madrid enjoys hot, dry summers and cool winters. While rain is less frequent than in northern Europe, Saharan dust (calima) occasionally sweeps in, covering everything in a fine layer of mud if it rains. Washing your car just before a calima event is a disaster. Our Madrid forecast tracks not only rain but also dust and wind levels to provide you with a reliable wash score. Check our daily recommendation below to make sure you wash your car on a perfectly clear, dust-free day in the Spanish capital.
+          </p>
+        </div>
+      </section>
+  
       <div class="location-bar glass-card">
         <div style="display:flex; align-items:center; gap:var(--space-2); font-weight:600;">
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -810,7 +820,7 @@
       window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(()=>{}); });
     }
 
-    detectLocation();
+    loadDataForLocation(40.4168, -3.7038, "Madrid", "ES");
 
     function applyTranslations() {
       isRTL = currentLang === 'ar';

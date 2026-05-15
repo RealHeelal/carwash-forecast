@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Wash Forecast — Should I Wash My Car Today?</title>
-  <meta name="description" content="Real-time car wash weather forecast. Check rain probability, dust, wind & humidity before washing your car. Free 7-day car wash forecast for any city worldwide." />
-  <meta name="keywords" content="car wash forecast, should I wash my car today, car wash weather, best day to wash car, car wash rain check" />
+  <title>Car Wash Forecast London — Best Time to Wash Your Car</title>
+  <meta name="description" content="Check the real-time car wash forecast for London. Find out the exact probability of rain, dust, and wind to know the best day to wash your car in London." />
+  <meta name="keywords" content="car wash forecast London, should I wash my car today London, car wash weather London, best day to wash car London" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://carwashforcast.com/" />
+  <link rel="canonical" href="https://carwashforcast.com/london" />
 
   <link rel="alternate" hreflang="en" href="https://carwashforcast.com/en/" />
   <link rel="alternate" hreflang="ar" href="https://carwashforcast.com/ar/" />
@@ -24,14 +24,14 @@
   <link rel="alternate" hreflang="x-default" href="https://carwashforcast.com/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://carwashforcast.com/" />
-  <meta property="og:title" content="Car Wash Forecast — Should I Wash My Car Today?" />
-  <meta property="og:description" content="Check if today is the right time to wash your car. Real-time rain, dust & wind analysis for any city." />
+  <meta property="og:url" content="https://carwashforcast.com/london" />
+  <meta property="og:title" content="Car Wash Forecast London — Should I Wash My Car Today?" />
+  <meta property="og:description" content="Check if today is the right time to wash your car in London. Real-time rain and dust analysis tailored for your city." />
   <meta property="og:image" content="https://carwashforcast.com/og-image.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Car Wash Forecast — Should I Wash My Car Today?" />
-  <meta name="twitter:description" content="Free real-time car wash weather forecast. Avoid wasting money washing before rain!" />
+  <meta name="twitter:title" content="Car Wash Forecast London — Should I Wash My Car Today?" />
+  <meta name="twitter:description" content="Free real-time car wash weather forecast for London. Avoid wasting money washing before rain!" />
 
   <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#3b82f6" />
@@ -293,6 +293,16 @@
     </header>
 
     <main>
+
+      <section style="max-width:800px; margin:var(--space-8) auto 0 auto; padding:0 var(--space-4);">
+        <div class="glass-card" style="padding:var(--space-6); border-radius:var(--radius-xl);">
+          <h1 style="font-size:var(--text-xl); margin-bottom:var(--space-4);">Car Wash Forecast for London</h1>
+          <p style="opacity:0.9; line-height: 1.8; font-size:var(--text-base);">
+            Should you wash your car in London today? London's famous temperate maritime climate means rain is a year-round possibility. Getting a car wash right before a classic London drizzle is a frustrating waste of money. That's why we created this tailored forecast for London drivers. We analyze the probability of precipitation, wind speeds, and general weather conditions to calculate a precise wash score. Don't risk washing your car if the skies are about to open up. Check our real-time London car wash recommendation below to find the best dry days this week and keep your car sparkling on the rainy streets.
+          </p>
+        </div>
+      </section>
+  
       <div class="location-bar glass-card">
         <div style="display:flex; align-items:center; gap:var(--space-2); font-weight:600;">
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -810,7 +820,7 @@
       window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(()=>{}); });
     }
 
-    detectLocation();
+    loadDataForLocation(51.5074, -0.1278, "London", "GB");
 
     function applyTranslations() {
       isRTL = currentLang === 'ar';
