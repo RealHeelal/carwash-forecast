@@ -35,7 +35,7 @@
 
   <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#3b82f6" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="Car Wash Forecast" />
 
   <script type="application/ld+json">
@@ -1183,7 +1183,7 @@
       const reminderEl = document.getElementById('history-reminder');
       
       if (history.length === 0) {
-        listEl.innerHTML = \`<div data-i18n="history_empty" style="text-align:center; opacity:0.7;">\${i18n[currentLang].history_empty}</div>\`;
+        listEl.innerHTML = `<div data-i18n="history_empty" style="text-align:center; opacity:0.7;">${i18n[currentLang].history_empty}</div>`;
         reminderEl.style.display = 'none';
         return;
       }
@@ -1191,10 +1191,10 @@
       listEl.innerHTML = '';
       history.forEach(item => {
         const d = new Date(item.date);
-        listEl.innerHTML += \`<div style="display:flex; justify-content:space-between; padding:var(--space-2) 0; border-bottom:1px solid rgba(255,255,255,0.1);">
-          <span>\${d.toLocaleDateString(navigator.language)} - \${item.location}</span>
-          <span style="font-weight:bold;">\${item.score}/100</span>
-        </div>\`;
+        listEl.innerHTML += `<div style="display:flex; justify-content:space-between; padding:var(--space-2) 0; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <span>${d.toLocaleDateString(navigator.language)} - ${item.location}</span>
+          <span style="font-weight:bold;">${item.score}/100</span>
+        </div>`;
       });
 
       const lastWash = new Date(history[0].date);
@@ -1202,7 +1202,7 @@
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
       if (diffDays >= 14) {
         reminderEl.style.display = 'block';
-        reminderEl.innerHTML = \`<span data-i18n="history_reminder">\${i18n[currentLang].history_reminder}</span>\`;
+        reminderEl.innerHTML = `<span data-i18n="history_reminder">${i18n[currentLang].history_reminder}</span>`;
       } else {
         reminderEl.style.display = 'none';
       }
