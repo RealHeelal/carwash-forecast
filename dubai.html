@@ -803,8 +803,19 @@
     };
 
     let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    let currentLang = navigator.language.split('-')[0];
-    if (!i18n[currentLang]) currentLang = 'en';
+    
+    let manualLangSelection = null;
+    let defaultCityLang = 'ar';
+
+    function detectInitialLanguage() {
+      if (manualLangSelection) return manualLangSelection;
+      if (defaultCityLang) return defaultCityLang;
+      let browserLang = navigator.language.split('-')[0];
+      if (['ar', 'en', 'fr', 'de', 'es', 'tr'].includes(browserLang)) return browserLang;
+      return 'en';
+    }
+
+    let currentLang = detectInitialLanguage();
     let isRTL = currentLang === 'ar';
     let weatherData = null;
     let airData = null;
@@ -837,6 +848,7 @@
     }
 
     function changeLanguage(lang) {
+      manualLangSelection = lang;
       currentLang = lang;
       applyTranslations();
       if (weatherData) renderAll(weatherData, airData);

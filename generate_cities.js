@@ -121,6 +121,14 @@ cities.forEach(city => {
     `loadDataForLocation(${city.lat}, ${city.lon}, "${city.city}", "${city.cc}");`
   );
 
+  // Default Arabic for specific cities
+  if (['riyadh.html', 'dubai.html', 'jeddah.html', 'cairo.html'].includes(city.filename)) {
+    cityHtml = cityHtml.replace(
+      /let defaultCityLang = null;/,
+      `let defaultCityLang = 'ar';`
+    );
+  }
+
   fs.writeFileSync(path.join(__dirname, city.filename), cityHtml, 'utf-8');
   console.log(`Generated ${city.filename}`);
 });
