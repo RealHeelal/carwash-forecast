@@ -252,8 +252,12 @@
     .search-input:focus { background: rgba(255,255,255,0.3); }
     
     [dir="rtl"] .forecast-strip { flex-direction: row; }
+  
+    .adsbygoogle { display: block !important; min-height: 100px; width: 100%; }
   </style>
-</head>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4045821311965688" crossorigin="anonymous"></script>
+  </head>
 <body class="theme-clear">
 
   <div class="particles">
@@ -351,8 +355,12 @@
       </div>
 
       <div class="ad-container ad-leaderboard" aria-label="Advertisement">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle"
+     style="display:block;min-height:100px;width:100%;"
+     data-ad-client="ca-pub-4045821311965688"
+     data-ad-slot="3035863077"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
 
@@ -377,7 +385,12 @@
       <div class="forecast-strip" id="forecast-strip"></div>
 
       <div class="ad-container ad-rectangle" aria-label="Advertisement" style="max-height: 120px; min-height: 120px;">
-        <ins class="adsbygoogle" style="display:block; width:100%; max-height:120px; margin:0 auto;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle"
+     style="display:block;min-height:100px;width:100%;"
+     data-ad-client="ca-pub-4045821311965688"
+     data-ad-slot="3035863077"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
 
@@ -589,8 +602,12 @@
   </div>
 
   <div class="ad-container ad-sticky-footer" aria-label="Advertisement">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <ins class="adsbygoogle"
+     style="display:block;min-height:100px;width:100%;"
+     data-ad-client="ca-pub-4045821311965688"
+     data-ad-slot="3035863077"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
@@ -980,7 +997,17 @@
       return template.replace('[SCORE]', score);
     }
 
-    function shareOnX() {
+    async function shareOnX() {
+      const canvas = await generateScoreCanvas();
+      const link = document.createElement('a');
+      link.download = `WashScore-${currentCity || 'City'}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      
+      if (i18n[currentLang].share_x_downloaded) {
+          alert(i18n[currentLang].share_x_downloaded);
+      }
+      
       const text = encodeURIComponent(getShareText());
       window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
     }

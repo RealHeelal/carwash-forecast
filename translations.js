@@ -1,5 +1,6 @@
 const i18n = {
       ar: {
+        share_x_downloaded: "تم تنزيل الصورة! الرجاء إرفاقها في تغريدتك. 📸",
         hero_title: "توقعات غسيل السيارة لـ {city}",
         hero_intro_riyadh: "مرحبًا بك في توقعات غسيل السيارات لمدينة الرياض! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
         hero_intro_dubai: "مرحبًا بك في توقعات غسيل السيارات لمدينة دبي! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
@@ -57,6 +58,7 @@ const i18n = {
         history_title: "سجل الغسيل", history_empty: "لم يتم تسجيل أي غسيل بعد.", history_reminder: "لقد مرت 14 يومًا منذ آخر غسيل لك! 🚗"
       },
       en: {
+        share_x_downloaded: "Image downloaded! Please attach it to your tweet. 📸",
         hero_title: "Car Wash Forecast for {city}",
         hero_intro_riyadh: "Welcome to the ultimate car wash forecast for Riyadh! Located in the heart of the Arabian Peninsula, Riyadh's arid desert climate means that keeping your car clean is a constant battle against dust and occasional sudden downpours. Sandstorms can undo a fresh wash in minutes, which makes checking the weather beforehand essential. Here at CarWashForcast.com, we analyze real-time data including dust levels, wind speeds, and precipitation chances specifically for Riyadh. Whether you're driving down King Fahd Road or parked in the Diplomatic Quarter, you shouldn't waste your money on a wash if a dust storm is looming. Check our reliable Riyadh car wash score below to find the perfect day to make your vehicle shine.",
         hero_intro_dubai: "Planning a car wash in Dubai? Known for its stunning skyline and luxury vehicles, Dubai also features a hot desert climate where fine sand and occasional winter rains can quickly dirty your car. The mix of high humidity near the coast and dusty winds inland requires careful planning for your next car wash. Don't let a sudden shamal (sandstorm) ruin your freshly polished paint! Our Dubai car wash forecast analyzes real-time meteorological data—including sand, wind, and rain probability—to give you an accurate wash score. Keep your ride looking pristine on Sheikh Zayed Road by checking our tailored forecast before heading to the wash station.",
@@ -115,6 +117,7 @@ const i18n = {
       }
     };
     i18n.fr = {
+      share_x_downloaded: "Image téléchargée! Veuillez l'attacher à votre tweet. 📸",
         hero_title: "Prévisions de lavage auto pour {city}",
         hero_intro_riyadh: "Bienvenue sur les prévisions de lavage auto pour Riyad! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
         hero_intro_dubai: "Bienvenue sur les prévisions de lavage auto pour Dubaï! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
@@ -148,6 +151,7 @@ const i18n = {
       history_title: "Historique de Lavage", history_empty: "Aucun lavage enregistré pour le moment.", history_reminder: "Cela fait 14 jours depuis votre dernier lavage ! 🚗"
     };
     i18n.es = {
+      share_x_downloaded: "¡Imagen descargada! Por favor, adjúntela a su tweet. 📸",
         hero_title: "Pronóstico de lavado para {city}",
         hero_intro_riyadh: "¡Bienvenido al pronóstico de lavado de autos para Riad! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
         hero_intro_dubai: "¡Bienvenido al pronóstico de lavado de autos para Dubái! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
@@ -181,6 +185,7 @@ const i18n = {
       history_title: "Historial de Lavado", history_empty: "Aún no hay lavados registrados.", history_reminder: "¡Han pasado 14 días desde tu último lavado! 🚗"
     };
     i18n.de = {
+      share_x_downloaded: "Bild heruntergeladen! Bitte fügen Sie es Ihrem Tweet hinzu. 📸",
         hero_title: "Autowasch-Wetter für {city}",
         hero_intro_riyadh: "Willkommen zur Autowäsche-Vorhersage für Riad! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
         hero_intro_dubai: "Willkommen zur Autowäsche-Vorhersage für Dubai! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
@@ -214,6 +219,7 @@ const i18n = {
       history_title: "Waschhistorie", history_empty: "Noch keine Wäschen protokolliert.", history_reminder: "Es ist 14 Tage her seit deiner letzten Wäsche! 🚗"
     };
     i18n.tr = {
+      share_x_downloaded: "Görüntü indirildi! Lütfen tweetinize ekleyin. 📸",
         hero_title: "{city} Araç Yıkama Tahmini",
         hero_intro_riyadh: "Riyad için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
         hero_intro_dubai: "Dubai için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
