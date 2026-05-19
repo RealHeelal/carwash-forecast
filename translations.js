@@ -1,5 +1,17 @@
 const i18n = {
       ar: {
+        hero_title: "توقعات غسيل السيارة لـ {city}",
+        hero_intro_riyadh: "مرحبًا بك في توقعات غسيل السيارات لمدينة الرياض! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_dubai: "مرحبًا بك في توقعات غسيل السيارات لمدينة دبي! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_jeddah: "مرحبًا بك في توقعات غسيل السيارات لمدينة جدة! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_cairo: "مرحبًا بك في توقعات غسيل السيارات لمدينة القاهرة! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_istanbul: "مرحبًا بك في توقعات غسيل السيارات لمدينة إسطنبول! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_paris: "مرحبًا بك في توقعات غسيل السيارات لمدينة باريس! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_berlin: "مرحبًا بك في توقعات غسيل السيارات لمدينة برلين! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_london: "مرحبًا بك في توقعات غسيل السيارات لمدينة لندن! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_madrid: "مرحبًا بك في توقعات غسيل السيارات لمدينة مدريد! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+        hero_intro_new_york: "مرحبًا بك في توقعات غسيل السيارات لمدينة نيويورك! نقوم بتحليل البيانات في الوقت الفعلي لتمنحك أفضل وقت لغسيل سيارتك. تجنب المطر والغبار ووفر أموالك باستخدام درجتنا الدقيقة.",
+
         app_name: "توقعات غسيل السيارة", tagline: "هل أغسل سيارتي اليوم؟",
         verdict_yes: "اغسل سيارتك الآن! ✅", verdict_wait: "انتظر قليلاً ⏳", verdict_no: "لا تغسل الآن ⛔", verdict_caution: "قد تغسل، لكن انتبه 🟡",
         score_label: "درجة الغسيل", best_day_label: "أفضل يوم للغسيل هذا الأسبوع:", best_day_suffix: "— يتبعه {n} أيام صافية",
@@ -45,6 +57,18 @@ const i18n = {
         history_title: "سجل الغسيل", history_empty: "لم يتم تسجيل أي غسيل بعد.", history_reminder: "لقد مرت 14 يومًا منذ آخر غسيل لك! 🚗"
       },
       en: {
+        hero_title: "Car Wash Forecast for {city}",
+        hero_intro_riyadh: "Welcome to the ultimate car wash forecast for Riyadh! Located in the heart of the Arabian Peninsula, Riyadh's arid desert climate means that keeping your car clean is a constant battle against dust and occasional sudden downpours. Sandstorms can undo a fresh wash in minutes, which makes checking the weather beforehand essential. Here at CarWashForcast.com, we analyze real-time data including dust levels, wind speeds, and precipitation chances specifically for Riyadh. Whether you're driving down King Fahd Road or parked in the Diplomatic Quarter, you shouldn't waste your money on a wash if a dust storm is looming. Check our reliable Riyadh car wash score below to find the perfect day to make your vehicle shine.",
+        hero_intro_dubai: "Planning a car wash in Dubai? Known for its stunning skyline and luxury vehicles, Dubai also features a hot desert climate where fine sand and occasional winter rains can quickly dirty your car. The mix of high humidity near the coast and dusty winds inland requires careful planning for your next car wash. Don't let a sudden shamal (sandstorm) ruin your freshly polished paint! Our Dubai car wash forecast analyzes real-time meteorological data—including sand, wind, and rain probability—to give you an accurate wash score. Keep your ride looking pristine on Sheikh Zayed Road by checking our tailored forecast before heading to the wash station.",
+        hero_intro_jeddah: "Welcome to the Jeddah car wash forecast! As a bustling port city on the Red Sea, Jeddah experiences a unique climate characterized by high humidity, salty sea breezes, and seasonal rains. This combination can leave a sticky, damaging residue on your vehicle's exterior if not washed correctly and at the right time. Our specialized forecast for Jeddah tracks rain probability, dust levels, and humidity to help you avoid washing your car right before a humid, dusty evening or an unexpected shower. Save time and protect your car's finish by checking our accurate wash recommendation below before you grab the soap and bucket.",
+        hero_intro_cairo: "Should you wash your car in Cairo today? Egypt's capital is a vibrant, bustling metropolis, but its location near the Sahara Desert means airborne dust and sand are part of daily life. The Khamsin winds in spring can drop heavy dust on your vehicle in hours, making car washing a strategic chore. At CarWashForcast.com, we provide a localized forecast for Cairo that analyzes dust concentrations, wind speeds, and rare rain chances. Don't waste your money washing your car when a dust storm is just around the corner. Use our Cairo wash score to find the optimal clear-weather window to keep your car looking brand new on the bustling streets.",
+        hero_intro_istanbul: "Welcome to the Istanbul car wash forecast! Straddling two continents, Istanbul has a transitional Mediterranean climate with distinct seasons. Sudden rain showers, coastal humidity from the Bosphorus, and urban dust can quickly ruin a fresh car wash. Whether you are driving in the European or Asian side, timing your car wash is essential to save money and keep your vehicle clean. We analyze local Istanbul weather data—including rain probability, wind, and dust—to provide a reliable wash score. Don't get caught washing your car just hours before a rainstorm rolling in from the Black Sea. Check our daily recommendation to pick the perfect day!",
+        hero_intro_paris: "Planning to wash your car in Paris? The City of Light has an oceanic climate, meaning frequent, unpredictable rain showers are common throughout the year. There's nothing more frustrating than spending money on a premium car wash only to have it rained on while driving down the Champs-Élysées the very next day. Our Paris car wash forecast takes the guesswork out of the equation. We process real-time precipitation, wind, and humidity data to give you an accurate wash score. Check our forecast below to find the longest dry spell this week and ensure your car stays brilliantly clean for as long as possible.",
+        hero_intro_berlin: "Welcome to the Berlin car wash forecast! Berlin's moderate continental climate brings warm summers and cold, damp winters. With regular rain showers, winter road salt, and autumn leaves, your car is constantly exposed to elements that ruin its shine. Washing your car at the wrong time is a waste of effort and money. Our specialized Berlin forecast analyzes real-time weather data, focusing on precipitation chances and temperature drops, to give you a precise wash score. Whether you're cruising down the Autobahn or navigating city traffic, use our tool to find the optimal dry window and keep your vehicle perfectly clean.",
+        hero_intro_london: "Should you wash your car in London today? London's famous temperate maritime climate means rain is a year-round possibility. Getting a car wash right before a classic London drizzle is a frustrating waste of money. That's why we created this tailored forecast for London drivers. We analyze the probability of precipitation, wind speeds, and general weather conditions to calculate a precise wash score. Don't risk washing your car if the skies are about to open up. Check our real-time London car wash recommendation below to find the best dry days this week and keep your car sparkling on the rainy streets.",
+        hero_intro_madrid: "Welcome to the Madrid car wash forecast! As a city with a Mediterranean climate transitioning into semi-arid, Madrid enjoys hot, dry summers and cool winters. While rain is less frequent than in northern Europe, Saharan dust (calima) occasionally sweeps in, covering everything in a fine layer of mud if it rains. Washing your car just before a calima event is a disaster. Our Madrid forecast tracks not only rain but also dust and wind levels to provide you with a reliable wash score. Check our daily recommendation below to make sure you wash your car on a perfectly clear, dust-free day in the Spanish capital.",
+        hero_intro_new_york: "Planning a car wash in New York City? The NYC metropolitan area has a humid subtropical climate, bringing everything from sudden summer thunderstorms to winter snow and road salt. The volatile weather means timing your car wash is crucial to maintaining your vehicle's paint and avoiding wasted money. Our New York car wash forecast analyzes real-time rain probability, snow risks, and wind data to generate a highly accurate wash score. Whether you're commuting through Manhattan or parked in the outer boroughs, check our 7-day forecast to find the perfect weather window and keep your car looking flawless.",
+
         app_name: "Car Wash Forecast", tagline: "Should I wash my car today?",
         verdict_yes: "Wash Your Car Now! ✅", verdict_wait: "Wait a Bit ⏳", verdict_no: "Don't Bother ⛔", verdict_caution: "Maybe, Check First 🟡",
         score_label: "Wash Score", best_day_label: "Best day to wash this week:", best_day_suffix: "— followed by {n} clear days",
@@ -90,7 +114,19 @@ const i18n = {
         history_title: "Wash History", history_empty: "No washes logged yet.", history_reminder: "It's been 14 days since your last wash! 🚗"
       }
     };
-    i18n.fr = { ...i18n.en, app_name: "Prévision Lavage Auto", tagline: "Dois-je laver ma voiture aujourd'hui?", verdict_yes: "Lavez maintenant! ✅", verdict_wait: "Attendez ⏳", verdict_no: "Ne vous donnez pas la peine ⛔", score_label: "Score de lavage", how_title: "Comment ça marche ?", blog_title: "Conseils d'entretien automobile", partner_title: "Faites la promotion de votre station", privacy_title: "Politique de confidentialité",
+    i18n.fr = {
+        hero_title: "Prévisions de lavage auto pour {city}",
+        hero_intro_riyadh: "Bienvenue sur les prévisions de lavage auto pour Riyad! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_dubai: "Bienvenue sur les prévisions de lavage auto pour Dubaï! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_jeddah: "Bienvenue sur les prévisions de lavage auto pour Djeddah! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_cairo: "Bienvenue sur les prévisions de lavage auto pour Le Caire! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_istanbul: "Bienvenue sur les prévisions de lavage auto pour Istanbul! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_paris: "Bienvenue sur les prévisions de lavage auto pour Paris! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_berlin: "Bienvenue sur les prévisions de lavage auto pour Berlin! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_london: "Bienvenue sur les prévisions de lavage auto pour Londres! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_madrid: "Bienvenue sur les prévisions de lavage auto pour Madrid! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+        hero_intro_new_york: "Bienvenue sur les prévisions de lavage auto pour New York! Nous analysons les données en temps réel pour vous donner le meilleur moment pour laver votre voiture. Évitez la pluie et la poussière grâce à notre score précis.",
+ ...i18n.en, app_name: "Prévision Lavage Auto", tagline: "Dois-je laver ma voiture aujourd'hui?", verdict_yes: "Lavez maintenant! ✅", verdict_wait: "Attendez ⏳", verdict_no: "Ne vous donnez pas la peine ⛔", score_label: "Score de lavage", how_title: "Comment ça marche ?", blog_title: "Conseils d'entretien automobile", partner_title: "Faites la promotion de votre station", privacy_title: "Politique de confidentialité",
       how_desc: "Nous analysons les données météorologiques en temps réel — probabilité de pluie, vitesse du vent, niveaux de poussière et humidité — pour vous donner une recommandation précise sur le meilleur moment pour laver votre voiture.",
       article_1_title: "Le meilleur moment pour laver votre voiture", article_1_body: "<p style='margin-bottom:1em;'>Laver votre voiture sous un soleil direct peut faire sécher l'eau et le savon trop rapidement, laissant des taches d'eau tenaces. La météo idéale est une journée couverte avec peu de vent.</p><p style='margin-bottom:1em;'>Le vent est un ennemi silencieux. Une journée venteuse peut souffler de la poussière directement sur votre voiture mouillée.</p><p>En utilisant notre score, vous pouvez trouver la période idéale pour garder votre voiture propre.</p>",
       article_2_title: "À quelle fréquence faut-il laver sa voiture ?", article_2_body: "<p style='margin-bottom:1em;'>En règle générale, il est recommandé de laver sa voiture toutes les deux semaines. Cela suffit pour éliminer la saleté avant qu'elle ne dégrade la peinture.</p><p style='margin-bottom:1em;'>Cependant, cela dépend de votre environnement. Le sel de déneigement peut provoquer de la rouille, nécessitant des lavages hebdomadaires.</p><p>Si votre voiture est dans un garage, vous pouvez espacer les lavages à un mois.</p>",
@@ -111,7 +147,19 @@ const i18n = {
       subscribe_btn: "Recevoir le Score Quotidien", subscribe_success: "Vous êtes abonné ! 🔔", log_wash_btn: "Enregistrer ce Lavage 💦",
       history_title: "Historique de Lavage", history_empty: "Aucun lavage enregistré pour le moment.", history_reminder: "Cela fait 14 jours depuis votre dernier lavage ! 🚗"
     };
-    i18n.es = { ...i18n.en, app_name: "Pronóstico Lavado Auto", tagline: "¿Debo lavar mi coche hoy?", verdict_yes: "¡Lava ahora! ✅", verdict_wait: "Espera ⏳", verdict_no: "No te molestes ⛔", score_label: "Puntuación de lavado", how_title: "¿Cómo funciona?", blog_title: "Consejos para cuidar su coche", partner_title: "Anuncie su autolavado", privacy_title: "Política de Privacidad",
+    i18n.es = {
+        hero_title: "Pronóstico de lavado para {city}",
+        hero_intro_riyadh: "¡Bienvenido al pronóstico de lavado de autos para Riad! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_dubai: "¡Bienvenido al pronóstico de lavado de autos para Dubái! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_jeddah: "¡Bienvenido al pronóstico de lavado de autos para Yeda! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_cairo: "¡Bienvenido al pronóstico de lavado de autos para El Cairo! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_istanbul: "¡Bienvenido al pronóstico de lavado de autos para Estambul! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_paris: "¡Bienvenido al pronóstico de lavado de autos para París! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_berlin: "¡Bienvenido al pronóstico de lavado de autos para Berlín! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_london: "¡Bienvenido al pronóstico de lavado de autos para Londres! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_madrid: "¡Bienvenido al pronóstico de lavado de autos para Madrid! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+        hero_intro_new_york: "¡Bienvenido al pronóstico de lavado de autos para Nueva York! Analizamos datos en tiempo real para brindarle el mejor momento para lavar su automóvil. Evite la lluvia y el polvo con nuestra puntuación precisa.",
+ ...i18n.en, app_name: "Pronóstico Lavado Auto", tagline: "¿Debo lavar mi coche hoy?", verdict_yes: "¡Lava ahora! ✅", verdict_wait: "Espera ⏳", verdict_no: "No te molestes ⛔", score_label: "Puntuación de lavado", how_title: "¿Cómo funciona?", blog_title: "Consejos para cuidar su coche", partner_title: "Anuncie su autolavado", privacy_title: "Política de Privacidad",
       how_desc: "Analizamos datos meteorológicos en tiempo real para brindarle una recomendación precisa sobre el mejor momento para lavar su automóvil.",
       article_1_title: "El mejor momento para lavar su coche", article_1_body: "<p style='margin-bottom:1em;'>Lavar su automóvil bajo luz solar directa puede dejar manchas de agua obstinadas. El clima ideal es un día nublado con poco viento.</p><p style='margin-bottom:1em;'>El viento puede arrojar polvo sobre su coche mojado, arruinando su trabajo.</p><p>Al usar nuestra puntuación, puede encontrar la ventana perfecta.</p>",
       article_2_title: "¿Con qué frecuencia debe lavar su coche?", article_2_body: "<p style='margin-bottom:1em;'>Los expertos recomiendan lavarlo cada dos semanas. Esto suele ser suficiente para eliminar la suciedad antes de que dañen la pintura.</p><p style='margin-bottom:1em;'>Si vive en un clima invernal, la sal de la carretera puede requerir un lavado semanal.</p><p>Si aparca en un garaje, podría extender el tiempo a un mes.</p>",
@@ -132,7 +180,19 @@ const i18n = {
       subscribe_btn: "Recibir Puntuación Diaria", subscribe_success: "¡Te has suscrito! 🔔", log_wash_btn: "Registrar este Lavado 💦",
       history_title: "Historial de Lavado", history_empty: "Aún no hay lavados registrados.", history_reminder: "¡Han pasado 14 días desde tu último lavado! 🚗"
     };
-    i18n.de = { ...i18n.en, app_name: "Autowäsche Vorhersage", tagline: "Soll ich mein Auto heute waschen?", verdict_yes: "Auto jetzt waschen! ✅", verdict_wait: "Noch etwas warten ⏳", verdict_no: "Nicht der Mühe wert ⛔", score_label: "Waschbewertung", how_title: "Wie funktioniert es?", blog_title: "Autopflege-Tipps", partner_title: "Werben Sie für Ihre Autowäsche", privacy_title: "Datenschutzerklärung",
+    i18n.de = {
+        hero_title: "Autowasch-Wetter für {city}",
+        hero_intro_riyadh: "Willkommen zur Autowäsche-Vorhersage für Riad! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_dubai: "Willkommen zur Autowäsche-Vorhersage für Dubai! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_jeddah: "Willkommen zur Autowäsche-Vorhersage für Dschidda! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_cairo: "Willkommen zur Autowäsche-Vorhersage für Kairo! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_istanbul: "Willkommen zur Autowäsche-Vorhersage für Istanbul! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_paris: "Willkommen zur Autowäsche-Vorhersage für Paris! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_berlin: "Willkommen zur Autowäsche-Vorhersage für Berlin! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_london: "Willkommen zur Autowäsche-Vorhersage für London! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_madrid: "Willkommen zur Autowäsche-Vorhersage für Madrid! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+        hero_intro_new_york: "Willkommen zur Autowäsche-Vorhersage für New York! Wir analysieren Echtzeitdaten, um Ihnen den besten Zeitpunkt zum Autowaschen zu geben. Vermeiden Sie Regen und Staub mit unserer genauen Bewertung.",
+ ...i18n.en, app_name: "Autowäsche Vorhersage", tagline: "Soll ich mein Auto heute waschen?", verdict_yes: "Auto jetzt waschen! ✅", verdict_wait: "Noch etwas warten ⏳", verdict_no: "Nicht der Mühe wert ⛔", score_label: "Waschbewertung", how_title: "Wie funktioniert es?", blog_title: "Autopflege-Tipps", partner_title: "Werben Sie für Ihre Autowäsche", privacy_title: "Datenschutzerklärung",
       how_desc: "Wir analysieren Echtzeit-Wetterdaten, um Ihnen eine genaue Empfehlung für den besten Zeitpunkt zum Autowaschen zu geben.",
       article_1_title: "Die beste Zeit zum Autowaschen", article_1_body: "<p style='margin-bottom:1em;'>Das Waschen bei starker Sonneneinstrahlung kann Wasserflecken hinterlassen. Das ideale Wetter ist ein bedeckter Tag mit wenig Wind.</p><p style='margin-bottom:1em;'>Ein windiger Tag kann Staub direkt auf das nasse Auto blasen.</p><p>Mit unserem Wasch-Score finden Sie das perfekte Zeitfenster.</p>",
       article_2_title: "Wie oft sollten Sie Ihr Auto waschen?", article_2_body: "<p style='margin-bottom:1em;'>Experten empfehlen alle zwei Wochen. Dies reicht normalerweise aus, um Schmutz zu entfernen, bevor der Lack angegriffen wird.</p><p style='margin-bottom:1em;'>In Regionen mit Winterwetter kann Streusalz eine wöchentliche Wäsche erfordern.</p><p>Wenn Sie Ihr Auto in einer Garage parken, können Sie den Abstand auf einen Monat ausdehnen.</p>",
@@ -153,7 +213,19 @@ const i18n = {
       subscribe_btn: "Tägliche Waschbewertung erhalten", subscribe_success: "Du bist abonniert! 🔔", log_wash_btn: "Diese Wäsche protokollieren 💦",
       history_title: "Waschhistorie", history_empty: "Noch keine Wäschen protokolliert.", history_reminder: "Es ist 14 Tage her seit deiner letzten Wäsche! 🚗"
     };
-    i18n.tr = { ...i18n.en, app_name: "Araç Yıkama Tahmini", tagline: "Arabamı bugün yıkamalı mıyım?", verdict_yes: "Şimdi Yıkayın! ✅", verdict_wait: "Biraz Bekleyin ⏳", verdict_no: "Zahmet Etmeyin ⛔", score_label: "Yıkama Puanı", how_title: "Nasıl çalışır?", blog_title: "Araç Bakım İpuçları", partner_title: "Oto Yıkamanızı Tanıtın", privacy_title: "Gizlilik Politikası",
+    i18n.tr = {
+        hero_title: "{city} Araç Yıkama Tahmini",
+        hero_intro_riyadh: "Riyad için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_dubai: "Dubai için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_jeddah: "Cidde için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_cairo: "Kahire için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_istanbul: "İstanbul için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_paris: "Paris için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_berlin: "Berlin için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_london: "Londra için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_madrid: "Madrid için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+        hero_intro_new_york: "New York için araç yıkama tahminine hoş geldiniz! Aracınızı yıkamak için en iyi zamanı size bildirmek üzere gerçek zamanlı verileri analiz ediyoruz. Kesin puanımızı kullanarak yağmur ve tozdan kaçının.",
+ ...i18n.en, app_name: "Araç Yıkama Tahmini", tagline: "Arabamı bugün yıkamalı mıyım?", verdict_yes: "Şimdi Yıkayın! ✅", verdict_wait: "Biraz Bekleyin ⏳", verdict_no: "Zahmet Etmeyin ⛔", score_label: "Yıkama Puanı", how_title: "Nasıl çalışır?", blog_title: "Araç Bakım İpuçları", partner_title: "Oto Yıkamanızı Tanıtın", privacy_title: "Gizlilik Politikası",
       how_desc: "Gerçek zamanlı hava durumu verilerini analiz ederek aracınızı yıkamak için en iyi zamanı belirleriz.",
       article_1_title: "Hava durumuna göre araba yıkamak için en iyi zaman", article_1_body: "<p style='margin-bottom:1em;'>Aracınızı yoğun güneş ışığında yıkamak inatçı su lekelerine yol açabilir. İdeal hava, bulutlu ve rüzgarsız bir gündür.</p><p style='margin-bottom:1em;'>Rüzgarlı bir gün, tozu doğrudan ıslak arabanıza üfleyebilir.</p><p>Puanımızı kullanarak mükemmel zaman aralığını bulabilirsiniz.</p>",
       article_2_title: "Arabanızı ne sıklıkla yıkamalısınız?", article_2_body: "<p style='margin-bottom:1em;'>Uzmanlar iki haftada bir yıkamanızı önerir. Bu, kirin boyaya zarar vermeden temizlenmesi için yeterlidir.</p><p style='margin-bottom:1em;'>Kış şartlarında yol tuzu haftalık yıkama gerektirebilir.</p><p>Arabanızı bir garaja park ediyorsanız bu süreyi bir aya çıkarabilirsiniz.</p>",
@@ -192,11 +264,38 @@ function applyTranslations() {
   document.documentElement.setAttribute('lang', currentLang);
   document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
   
+  const cityTranslations = {
+    'Riyadh': { ar: 'الرياض', fr: 'Riyad', de: 'Riad', es: 'Riad', tr: 'Riyad', en: 'Riyadh' },
+    'Dubai': { ar: 'دبي', fr: 'Dubaï', de: 'Dubai', es: 'Dubái', tr: 'Dubai', en: 'Dubai' },
+    'Jeddah': { ar: 'جدة', fr: 'Djeddah', de: 'Dschidda', es: 'Yeda', tr: 'Cidde', en: 'Jeddah' },
+    'Cairo': { ar: 'القاهرة', fr: 'Le Caire', de: 'Kairo', es: 'El Cairo', tr: 'Kahire', en: 'Cairo' },
+    'Istanbul': { ar: 'إسطنبول', fr: 'Istanbul', de: 'Istanbul', es: 'Estambul', tr: 'İstanbul', en: 'Istanbul' },
+    'Paris': { ar: 'باريس', fr: 'Paris', de: 'Paris', es: 'París', tr: 'Paris', en: 'Paris' },
+    'Berlin': { ar: 'برلين', fr: 'Berlin', de: 'Berlin', es: 'Berlín', tr: 'Berlin', en: 'Berlin' },
+    'London': { ar: 'لندن', fr: 'Londres', de: 'London', es: 'Londres', tr: 'Londra', en: 'London' },
+    'Madrid': { ar: 'مدريد', fr: 'Madrid', de: 'Madrid', es: 'Madrid', tr: 'Madrid', en: 'Madrid' },
+    'New York': { ar: 'نيويورك', fr: 'New York', de: 'New York', es: 'Nueva York', tr: 'New York', en: 'New York' }
+  };
+  
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (i18n[currentLang] && i18n[currentLang][key]) {
-      el.innerHTML = i18n[currentLang][key];
+      let text = i18n[currentLang][key];
+      
+      let cName = currentCity;
+      if (cityTranslations[currentCity] && cityTranslations[currentCity][currentLang]) {
+         cName = cityTranslations[currentCity][currentLang];
+      }
+      if (text.includes('{city}')) {
+         text = text.replace(/{city}/g, cName || '...');
+      }
+      el.innerHTML = text;
     }
+  });
+  if (i18n[currentLang].app_name) {
+    document.title = i18n[currentLang].app_name + ' — ' + i18n[currentLang].tagline;
+  }
+}
   });
   if (i18n[currentLang].app_name) {
     document.title = i18n[currentLang].app_name + ' — ' + i18n[currentLang].tagline;

@@ -27,11 +27,14 @@
   <meta property="og:url" content="https://carwashforcast.com/dubai" />
   <meta property="og:title" content="Car Wash Forecast Dubai — Should I Wash My Car Today?" />
   <meta property="og:description" content="Check if today is the right time to wash your car in Dubai. Real-time rain and dust analysis tailored for your city." />
-  <meta property="og:image" content="https://carwashforcast.com/og-image.png" />
+  <meta property="og:image" content="https://carwashforcast.com/og-image.jpg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="1080" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Car Wash Forecast Dubai — Should I Wash My Car Today?" />
   <meta name="twitter:description" content="Free real-time car wash weather forecast for Dubai. Avoid wasting money washing before rain!" />
+  <meta name="twitter:image" content="https://carwashforcast.com/og-image.jpg" />
 
   <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#3b82f6" />
@@ -296,8 +299,8 @@
 
       <section style="max-width:800px; margin:var(--space-8) auto 0 auto; padding:0 var(--space-4);">
         <div class="glass-card" style="padding:var(--space-6); border-radius:var(--radius-xl);">
-          <h1 style="font-size:var(--text-xl); margin-bottom:var(--space-4);">Car Wash Forecast for Dubai</h1>
-          <p style="opacity:0.9; line-height: 1.8; font-size:var(--text-base);">
+          <h1 style="font-size:var(--text-xl); margin-bottom:var(--space-4);" data-i18n="hero_title">Car Wash Forecast for Dubai</h1>
+          <p style="opacity:0.9; line-height: 1.8; font-size:var(--text-base);" data-i18n="hero_intro_dubai">
             Planning a car wash in Dubai? Known for its stunning skyline and luxury vehicles, Dubai also features a hot desert climate where fine sand and occasional winter rains can quickly dirty your car. The mix of high humidity near the coast and dusty winds inland requires careful planning for your next car wash. Don't let a sudden shamal (sandstorm) ruin your freshly polished paint! Our Dubai car wash forecast analyzes real-time meteorological data—including sand, wind, and rain probability—to give you an accurate wash score. Keep your ride looking pristine on Sheikh Zayed Road by checking our tailored forecast before heading to the wash station.
           </p>
         </div>
@@ -1187,18 +1190,17 @@
     async function nativeShareCanvas() {
       if (!navigator.share) return;
       const canvas = await generateScoreCanvas();
-      canvas.toBlob(async (blob) => {
-        const file = new File([blob], 'WashScore.png', { type: 'image/png' });
-        try {
-          await navigator.share({
-            title: 'Car Wash Score',
-            text: getShareText(),
-            files: [file]
-          });
-        } catch(e) {
-          console.log('Sharing failed', e);
-        }
-      }, 'image/png');
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+      const file = new File([blob], 'WashScore.png', { type: 'image/png' });
+      try {
+        await navigator.share({
+          title: 'Car Wash Score',
+          text: getShareText(),
+          files: [file]
+        });
+      } catch(e) {
+        console.log('Sharing failed', e);
+      }
     }
 
   </script>

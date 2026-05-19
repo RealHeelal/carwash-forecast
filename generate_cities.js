@@ -102,8 +102,8 @@ cities.forEach(city => {
   const introHtml = `
       <section style="max-width:800px; margin:var(--space-8) auto 0 auto; padding:0 var(--space-4);">
         <div class="glass-card" style="padding:var(--space-6); border-radius:var(--radius-xl);">
-          <h1 style="font-size:var(--text-xl); margin-bottom:var(--space-4);">Car Wash Forecast for ${city.city}</h1>
-          <p style="opacity:0.9; line-height: 1.8; font-size:var(--text-base);">
+          <h1 style="font-size:var(--text-xl); margin-bottom:var(--space-4);" data-i18n="hero_title">Car Wash Forecast for ${city.city}</h1>
+          <p style="opacity:0.9; line-height: 1.8; font-size:var(--text-base);" data-i18n="hero_intro_${city.city.toLowerCase().replace(/ /g, '_')}">
             ${city.intro}
           </p>
         </div>

@@ -27,11 +27,14 @@
   <meta property="og:url" content="https://carwashforcast.com/" />
   <meta property="og:title" content="Car Wash Forecast — Should I Wash My Car Today?" />
   <meta property="og:description" content="Check if today is the right time to wash your car. Real-time rain, dust & wind analysis for any city." />
-  <meta property="og:image" content="https://carwashforcast.com/og-image.png" />
+  <meta property="og:image" content="https://carwashforcast.com/og-image.jpg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="1080" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Car Wash Forecast — Should I Wash My Car Today?" />
   <meta name="twitter:description" content="Free real-time car wash weather forecast. Avoid wasting money washing before rain!" />
+  <meta name="twitter:image" content="https://carwashforcast.com/og-image.jpg" />
 
   <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#3b82f6" />
@@ -1175,18 +1178,17 @@
     async function nativeShareCanvas() {
       if (!navigator.share) return;
       const canvas = await generateScoreCanvas();
-      canvas.toBlob(async (blob) => {
-        const file = new File([blob], 'WashScore.png', { type: 'image/png' });
-        try {
-          await navigator.share({
-            title: 'Car Wash Score',
-            text: getShareText(),
-            files: [file]
-          });
-        } catch(e) {
-          console.log('Sharing failed', e);
-        }
-      }, 'image/png');
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+      const file = new File([blob], 'WashScore.png', { type: 'image/png' });
+      try {
+        await navigator.share({
+          title: 'Car Wash Score',
+          text: getShareText(),
+          files: [file]
+        });
+      } catch(e) {
+        console.log('Sharing failed', e);
+      }
     }
 
   </script>
