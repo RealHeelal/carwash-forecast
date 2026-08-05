@@ -302,11 +302,7 @@ function applyTranslations() {
     document.title = i18n[currentLang].app_name + ' — ' + i18n[currentLang].tagline;
   }
 }
-  });
-  if (i18n[currentLang].app_name) {
-    document.title = i18n[currentLang].app_name + ' — ' + i18n[currentLang].tagline;
-  }
-}
+
 
 function changeLanguage(lang) {
   manualLangSelection = lang;

@@ -9,6 +9,12 @@ self.addEventListener('install', e => {
   );
 });
 self.addEventListener('fetch', e => {
+  if (e.request.url.includes('googlesyndication.com') ||
+      e.request.url.includes('googleadservices.com') ||
+      e.request.url.includes('doubleclick.net') ||
+      e.request.url.includes('pagead2')) {
+    return;
+  }
   e.respondWith(
     fetch(e.request).catch(() => caches.match(e.request))
   );
