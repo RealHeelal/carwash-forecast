@@ -7,35 +7,23 @@
   <meta name="description" content="Check the real-time car wash forecast for Riyadh. Find out the exact probability of rain, dust, and wind to know the best day to wash your car in Riyadh." />
   <meta name="keywords" content="car wash forecast Riyadh, should I wash my car today Riyadh, car wash weather Riyadh, best day to wash car Riyadh" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://carwashforcast.com/riyadh" />
+  <link rel="canonical" href="https://www.carwashforecast.com/riyadh" />
 
-  <link rel="alternate" hreflang="en" href="https://carwashforcast.com/en/" />
-  <link rel="alternate" hreflang="ar" href="https://carwashforcast.com/ar/" />
-  <link rel="alternate" hreflang="fr" href="https://carwashforcast.com/fr/" />
-  <link rel="alternate" hreflang="es" href="https://carwashforcast.com/es/" />
-  <link rel="alternate" hreflang="de" href="https://carwashforcast.com/de/" />
-  <link rel="alternate" hreflang="tr" href="https://carwashforcast.com/tr/" />
-  <link rel="alternate" hreflang="pt" href="https://carwashforcast.com/pt/" />
-  <link rel="alternate" hreflang="id" href="https://carwashforcast.com/id/" />
-  <link rel="alternate" hreflang="ru" href="https://carwashforcast.com/ru/" />
-  <link rel="alternate" hreflang="zh" href="https://carwashforcast.com/zh/" />
-  <link rel="alternate" hreflang="ja" href="https://carwashforcast.com/ja/" />
-  <link rel="alternate" hreflang="hi" href="https://carwashforcast.com/hi/" />
-  <link rel="alternate" hreflang="x-default" href="https://carwashforcast.com/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://carwashforcast.com/riyadh" />
+  <meta property="og:url" content="https://www.carwashforecast.com/riyadh" />
   <meta property="og:title" content="Car Wash Forecast Riyadh — Should I Wash My Car Today?" />
   <meta property="og:description" content="Check if today is the right time to wash your car in Riyadh. Real-time rain and dust analysis tailored for your city." />
-  <meta property="og:image" content="https://carwashforcast.com/og-image.jpg" />
+  <meta property="og:image" content="https://www.carwashforecast.com/og-image.jpg" />
   <meta property="og:image:width" content="1080" />
   <meta property="og:image:height" content="1080" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Car Wash Forecast Riyadh — Should I Wash My Car Today?" />
   <meta name="twitter:description" content="Free real-time car wash weather forecast for Riyadh. Avoid wasting money washing before rain!" />
-  <meta name="twitter:image" content="https://carwashforcast.com/og-image.jpg" />
+  <meta name="twitter:image" content="https://www.carwashforecast.com/og-image.jpg" />
 
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E">
   <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#3b82f6" />
   <meta name="mobile-web-app-capable" content="yes" />
@@ -47,7 +35,7 @@
     "@type": "WebApplication",
     "name": "Car Wash Forecast",
     "alternateName": "توقعات غسيل السيارة",
-    "url": "https://carwashforcast.com",
+    "url": "https://www.carwashforecast.com",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "All",
     "browserRequirements": "Any modern browser",
@@ -67,7 +55,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300..700&display=swap" rel="stylesheet"></noscript>
 
   <style>
     :root, [data-theme="light"] {
@@ -85,13 +76,13 @@
       --color-primary: oklch(0.52 0.17 230);
       --color-primary-hover: oklch(0.42 0.17 230);
       --color-primary-highlight: oklch(0.94 0.04 230);
-      --color-yes: oklch(0.62 0.17 145);
+      --color-yes: oklch(0.52 0.15 145);
       --color-yes-bg: oklch(0.97 0.03 145);
-      --color-wait: oklch(0.68 0.16 75);
+      --color-wait: oklch(0.50 0.12 75);
       --color-wait-bg: oklch(0.97 0.03 75);
       --color-no: oklch(0.55 0.18 25);
       --color-no-bg: oklch(0.97 0.03 25);
-      --color-caution: oklch(0.70 0.15 55);
+      --color-caution: oklch(0.55 0.14 55);
       --color-caution-bg: oklch(0.97 0.03 55);
       --color-surface-dynamic: rgba(0,0,0,0.1);
       --radius-sm: 0.375rem; --radius-md: 0.5rem;
@@ -256,6 +247,16 @@
     .adsbygoogle { display: block !important; min-height: 100px; width: 100%; }
   </style>
 
+  <script>
+    // Init an ad slot only once it has width (avoids "No slot size for availableWidth=0").
+    function pushAdWhenVisible(ins){
+      if(!ins) return;
+      var go=function(){ (window.adsbygoogle = window.adsbygoogle || []).push({}); };
+      if(ins.offsetWidth>0) return go();
+      var ro=new ResizeObserver(function(){ if(ins.offsetWidth>0){ ro.disconnect(); go(); } });
+      ro.observe(ins);
+    }
+  </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4045821311965688" crossorigin="anonymous"></script>
   </head>
 <body class="theme-clear">
@@ -303,7 +304,7 @@
         <div class="glass-card" style="padding:var(--space-6); border-radius:var(--radius-xl);">
           <h1 style="font-size:var(--text-xl); margin-bottom:var(--space-4);" data-i18n="hero_title">Car Wash Forecast for Riyadh</h1>
           <p style="opacity:0.9; line-height: 1.8; font-size:var(--text-base);" data-i18n="hero_intro_riyadh">
-            Welcome to the ultimate car wash forecast for Riyadh! Located in the heart of the Arabian Peninsula, Riyadh's arid desert climate means that keeping your car clean is a constant battle against dust and occasional sudden downpours. Sandstorms can undo a fresh wash in minutes, which makes checking the weather beforehand essential. Here at CarWashForcast.com, we analyze real-time data including dust levels, wind speeds, and precipitation chances specifically for Riyadh. Whether you're driving down King Fahd Road or parked in the Diplomatic Quarter, you shouldn't waste your money on a wash if a dust storm is looming. Check our reliable Riyadh car wash score below to find the perfect day to make your vehicle shine.
+            Welcome to the ultimate car wash forecast for Riyadh! Located in the heart of the Arabian Peninsula, Riyadh's arid desert climate means that keeping your car clean is a constant battle against dust and occasional sudden downpours. Sandstorms can undo a fresh wash in minutes, which makes checking the weather beforehand essential. Here at CarWashForecast.com, we analyze real-time data including dust levels, wind speeds, and precipitation chances specifically for Riyadh. Whether you're driving down King Fahd Road or parked in the Diplomatic Quarter, you shouldn't waste your money on a wash if a dust storm is looming. Check our reliable Riyadh car wash score below to find the perfect day to make your vehicle shine.
           </p>
         </div>
       </section>
@@ -364,14 +365,14 @@
         </div>
       </div>
 
-      <div class="ad-container ad-leaderboard" aria-label="Advertisement">
+      <div class="ad-container ad-leaderboard" role="complementary" aria-label="Advertisement">
         <ins class="adsbygoogle"
      style="display:block;min-height:100px;width:100%;"
      data-ad-client="ca-pub-4045821311965688"
      data-ad-slot="3035863077"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>pushAdWhenVisible(document.currentScript.previousElementSibling);</script>
       </div>
 
       <div class="risk-grid">
@@ -394,14 +395,14 @@
 
       <div class="forecast-strip" id="forecast-strip"></div>
 
-      <div class="ad-container ad-rectangle" aria-label="Advertisement" style="max-height: 120px; min-height: 120px;">
+      <div class="ad-container ad-rectangle" role="complementary" aria-label="Advertisement" style="max-height: 120px; min-height: 120px;">
         <ins class="adsbygoogle"
      style="display:block;min-height:100px;width:100%;"
      data-ad-client="ca-pub-4045821311965688"
      data-ad-slot="3035863077"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>pushAdWhenVisible(document.currentScript.previousElementSibling);</script>
       </div>
 
       <div class="best-day-card glass-card">
@@ -574,7 +575,7 @@
         <h2 data-i18n="privacy_title" style="font-size:var(--text-lg); margin-bottom:var(--space-4);">Privacy Policy</h2>
         <div class="glass-card" style="padding:var(--space-6); border-radius:var(--radius-xl);">
           <p data-i18n="privacy_body" style="opacity:0.8; font-size:var(--text-sm); line-height:1.7;">
-            We respect your privacy. carwashforcast.com uses your device's location solely to provide accurate weather forecasts for your area. We do not store, track, or share your exact location data with any third parties. By using this service, you consent to our use of location data for functionality and our partner networks for personalized advertisements.
+            We respect your privacy. carwashforecast.com uses your device's location solely to provide accurate weather forecasts for your area. We do not store, track, or share your exact location data with any third parties. By using this service, you consent to our use of location data for functionality and our partner networks for personalized advertisements.
           </p>
         </div>
       </section>
@@ -598,7 +599,7 @@
     </section>
 
     <footer>
-      <div>&copy; <span id="year"></span> CarWashForcast.com</div>
+      <div>&copy; <span id="year"></span> CarWashForecast.com</div>
       <div style="display:flex; flex-wrap:wrap; gap:var(--space-4); justify-content:center; max-width:800px; margin:0 auto var(--space-4) auto;">
         <a href="#how-it-works" data-i18n="how_title">How does it work?</a>
         <a href="#articles" data-i18n="blog_title">Car Care Insights</a>
@@ -611,14 +612,14 @@
     </footer>
   </div>
 
-  <div class="ad-container ad-sticky-footer" aria-label="Advertisement">
+  <div class="ad-container ad-sticky-footer" role="complementary" aria-label="Advertisement">
     <ins class="adsbygoogle"
      style="display:block;min-height:100px;width:100%;"
      data-ad-client="ca-pub-4045821311965688"
      data-ad-slot="3035863077"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <script>pushAdWhenVisible(document.currentScript.previousElementSibling);</script>
   </div>
 
   <script src="./translations.js"></script>
@@ -1206,7 +1207,7 @@
       // Branding
       ctx.font = 'bold 35px Arial, Helvetica, sans-serif';
       ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-      ctx.fillText('carwashforcast.com', 540, 960);
+      ctx.fillText('carwashforecast.com', 540, 960);
 
       return canvas;
     }
