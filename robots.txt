@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://carwashforcast.com/sitemap.xml
+Sitemap: https://www.carwashforecast.com/sitemap.xml

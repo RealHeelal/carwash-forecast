@@ -4,7 +4,7 @@ const path = require('path');
 const cities = [
   {
     filename: 'riyadh.html', city: 'Riyadh', cc: 'SA', lat: 24.7136, lon: 46.6753,
-    intro: "Welcome to the ultimate car wash forecast for Riyadh! Located in the heart of the Arabian Peninsula, Riyadh's arid desert climate means that keeping your car clean is a constant battle against dust and occasional sudden downpours. Sandstorms can undo a fresh wash in minutes, which makes checking the weather beforehand essential. Here at CarWashForcast.com, we analyze real-time data including dust levels, wind speeds, and precipitation chances specifically for Riyadh. Whether you're driving down King Fahd Road or parked in the Diplomatic Quarter, you shouldn't waste your money on a wash if a dust storm is looming. Check our reliable Riyadh car wash score below to find the perfect day to make your vehicle shine."
+    intro: "Welcome to the ultimate car wash forecast for Riyadh! Located in the heart of the Arabian Peninsula, Riyadh's arid desert climate means that keeping your car clean is a constant battle against dust and occasional sudden downpours. Sandstorms can undo a fresh wash in minutes, which makes checking the weather beforehand essential. Here at CarWashForecast.com, we analyze real-time data including dust levels, wind speeds, and precipitation chances specifically for Riyadh. Whether you're driving down King Fahd Road or parked in the Diplomatic Quarter, you shouldn't waste your money on a wash if a dust storm is looming. Check our reliable Riyadh car wash score below to find the perfect day to make your vehicle shine."
   },
   {
     filename: 'dubai.html', city: 'Dubai', cc: 'AE', lat: 25.2048, lon: 55.2708,
@@ -16,7 +16,7 @@ const cities = [
   },
   {
     filename: 'cairo.html', city: 'Cairo', cc: 'EG', lat: 30.0444, lon: 31.2357,
-    intro: "Should you wash your car in Cairo today? Egypt's capital is a vibrant, bustling metropolis, but its location near the Sahara Desert means airborne dust and sand are part of daily life. The Khamsin winds in spring can drop heavy dust on your vehicle in hours, making car washing a strategic chore. At CarWashForcast.com, we provide a localized forecast for Cairo that analyzes dust concentrations, wind speeds, and rare rain chances. Don't waste your money washing your car when a dust storm is just around the corner. Use our Cairo wash score to find the optimal clear-weather window to keep your car looking brand new on the bustling streets."
+    intro: "Should you wash your car in Cairo today? Egypt's capital is a vibrant, bustling metropolis, but its location near the Sahara Desert means airborne dust and sand are part of daily life. The Khamsin winds in spring can drop heavy dust on your vehicle in hours, making car washing a strategic chore. At CarWashForecast.com, we provide a localized forecast for Cairo that analyzes dust concentrations, wind speeds, and rare rain chances. Don't waste your money washing your car when a dust storm is just around the corner. Use our Cairo wash score to find the optimal clear-weather window to keep your car looking brand new on the bustling streets."
   },
   {
     filename: 'istanbul.html', city: 'Istanbul', cc: 'TR', lat: 41.0082, lon: 28.9784,
@@ -70,14 +70,14 @@ cities.forEach(city => {
 
   // Replace Canonical
   cityHtml = cityHtml.replace(
-    /<link rel="canonical" href="https:\/\/carwashforcast\.com\/" \/>/,
-    `<link rel="canonical" href="https://carwashforcast.com/${city.filename.replace('.html', '')}" />`
+    /<link rel="canonical" href="https:\/\/www\.carwashforecast\.com\/" \/>/,
+    `<link rel="canonical" href="https://www.carwashforecast.com/${city.filename.replace('.html', '')}" />`
   );
 
   // Replace OG tags
   cityHtml = cityHtml.replace(
-    /<meta property="og:url" content="https:\/\/carwashforcast\.com\/" \/>/,
-    `<meta property="og:url" content="https://carwashforcast.com/${city.filename.replace('.html', '')}" />`
+    /<meta property="og:url" content="https:\/\/www\.carwashforecast\.com\/" \/>/,
+    `<meta property="og:url" content="https://www.carwashforecast.com/${city.filename.replace('.html', '')}" />`
   );
   cityHtml = cityHtml.replace(
     /<meta property="og:title" content=".*?" \/>/,

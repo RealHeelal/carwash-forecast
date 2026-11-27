@@ -53,17 +53,17 @@ const i18n = {
         prod_washer: "آلة غسيل بالضغط", prod_washer_desc: "تزيل الأوساخ بسهولة وسرعة.",
         prod_interior: "منظف داخلي", prod_interior_desc: "حافظ على لوحة القيادة والمقاعد نظيفة.",
         prod_wheel: "منظف الإطارات", prod_wheel_desc: "يذيب غبار الفرامل لجنوط لامعة.",
-        buy_on_amazon: "شراء من أمازون", share_text_template: "نتيجة غسيل سيارتي اليوم [SCORE]/100 🚗✨ تحقق من نتيجتك على carwashforcast.com #غسيل_سيارات #طقس",
+        buy_on_amazon: "شراء من أمازون", share_text_template: "نتيجة غسيل سيارتي اليوم [SCORE]/100 🚗✨ تحقق من نتيجتك على carwashforecast.com #غسيل_سيارات #طقس",
         subscribe_btn: "الحصول على درجة الغسيل اليومية", subscribe_success: "تم الاشتراك! 🔔", log_wash_btn: "سجل هذا الغسيل 💦",
         history_title: "سجل الغسيل", history_empty: "لم يتم تسجيل أي غسيل بعد.", history_reminder: "لقد مرت 14 يومًا منذ آخر غسيل لك! 🚗"
       },
       en: {
         share_x_downloaded: "Image downloaded! Please attach it to your tweet. 📸",
         hero_title: "Car Wash Forecast for {city}",
-        hero_intro_riyadh: "Welcome to the ultimate car wash forecast for Riyadh! Located in the heart of the Arabian Peninsula, Riyadh's arid desert climate means that keeping your car clean is a constant battle against dust and occasional sudden downpours. Sandstorms can undo a fresh wash in minutes, which makes checking the weather beforehand essential. Here at CarWashForcast.com, we analyze real-time data including dust levels, wind speeds, and precipitation chances specifically for Riyadh. Whether you're driving down King Fahd Road or parked in the Diplomatic Quarter, you shouldn't waste your money on a wash if a dust storm is looming. Check our reliable Riyadh car wash score below to find the perfect day to make your vehicle shine.",
+        hero_intro_riyadh: "Welcome to the ultimate car wash forecast for Riyadh! Located in the heart of the Arabian Peninsula, Riyadh's arid desert climate means that keeping your car clean is a constant battle against dust and occasional sudden downpours. Sandstorms can undo a fresh wash in minutes, which makes checking the weather beforehand essential. Here at CarWashForecast.com, we analyze real-time data including dust levels, wind speeds, and precipitation chances specifically for Riyadh. Whether you're driving down King Fahd Road or parked in the Diplomatic Quarter, you shouldn't waste your money on a wash if a dust storm is looming. Check our reliable Riyadh car wash score below to find the perfect day to make your vehicle shine.",
         hero_intro_dubai: "Planning a car wash in Dubai? Known for its stunning skyline and luxury vehicles, Dubai also features a hot desert climate where fine sand and occasional winter rains can quickly dirty your car. The mix of high humidity near the coast and dusty winds inland requires careful planning for your next car wash. Don't let a sudden shamal (sandstorm) ruin your freshly polished paint! Our Dubai car wash forecast analyzes real-time meteorological data—including sand, wind, and rain probability—to give you an accurate wash score. Keep your ride looking pristine on Sheikh Zayed Road by checking our tailored forecast before heading to the wash station.",
         hero_intro_jeddah: "Welcome to the Jeddah car wash forecast! As a bustling port city on the Red Sea, Jeddah experiences a unique climate characterized by high humidity, salty sea breezes, and seasonal rains. This combination can leave a sticky, damaging residue on your vehicle's exterior if not washed correctly and at the right time. Our specialized forecast for Jeddah tracks rain probability, dust levels, and humidity to help you avoid washing your car right before a humid, dusty evening or an unexpected shower. Save time and protect your car's finish by checking our accurate wash recommendation below before you grab the soap and bucket.",
-        hero_intro_cairo: "Should you wash your car in Cairo today? Egypt's capital is a vibrant, bustling metropolis, but its location near the Sahara Desert means airborne dust and sand are part of daily life. The Khamsin winds in spring can drop heavy dust on your vehicle in hours, making car washing a strategic chore. At CarWashForcast.com, we provide a localized forecast for Cairo that analyzes dust concentrations, wind speeds, and rare rain chances. Don't waste your money washing your car when a dust storm is just around the corner. Use our Cairo wash score to find the optimal clear-weather window to keep your car looking brand new on the bustling streets.",
+        hero_intro_cairo: "Should you wash your car in Cairo today? Egypt's capital is a vibrant, bustling metropolis, but its location near the Sahara Desert means airborne dust and sand are part of daily life. The Khamsin winds in spring can drop heavy dust on your vehicle in hours, making car washing a strategic chore. At CarWashForecast.com, we provide a localized forecast for Cairo that analyzes dust concentrations, wind speeds, and rare rain chances. Don't waste your money washing your car when a dust storm is just around the corner. Use our Cairo wash score to find the optimal clear-weather window to keep your car looking brand new on the bustling streets.",
         hero_intro_istanbul: "Welcome to the Istanbul car wash forecast! Straddling two continents, Istanbul has a transitional Mediterranean climate with distinct seasons. Sudden rain showers, coastal humidity from the Bosphorus, and urban dust can quickly ruin a fresh car wash. Whether you are driving in the European or Asian side, timing your car wash is essential to save money and keep your vehicle clean. We analyze local Istanbul weather data—including rain probability, wind, and dust—to provide a reliable wash score. Don't get caught washing your car just hours before a rainstorm rolling in from the Black Sea. Check our daily recommendation to pick the perfect day!",
         hero_intro_paris: "Planning to wash your car in Paris? The City of Light has an oceanic climate, meaning frequent, unpredictable rain showers are common throughout the year. There's nothing more frustrating than spending money on a premium car wash only to have it rained on while driving down the Champs-Élysées the very next day. Our Paris car wash forecast takes the guesswork out of the equation. We process real-time precipitation, wind, and humidity data to give you an accurate wash score. Check our forecast below to find the longest dry spell this week and ensure your car stays brilliantly clean for as long as possible.",
         hero_intro_berlin: "Welcome to the Berlin car wash forecast! Berlin's moderate continental climate brings warm summers and cold, damp winters. With regular rain showers, winter road salt, and autumn leaves, your car is constantly exposed to elements that ruin its shine. Washing your car at the wrong time is a waste of effort and money. Our specialized Berlin forecast analyzes real-time weather data, focusing on precipitation chances and temperature drops, to give you a precise wash score. Whether you're cruising down the Autobahn or navigating city traffic, use our tool to find the optimal dry window and keep your vehicle perfectly clean.",
@@ -100,7 +100,7 @@ const i18n = {
         partner_cta: "Send Inquiry",
         featured_partners_title: "Featured Partners",
         privacy_title: "Privacy Policy",
-        privacy_body: "We respect your privacy. carwashforcast.com uses your device's location solely to provide accurate weather forecasts for your area. We do not store, track, or share your exact location data with any third parties. By using this service, you consent to our use of location data for functionality and our partner networks for personalized advertisements.",
+        privacy_body: "We respect your privacy. carwashforecast.com uses your device's location solely to provide accurate weather forecasts for your area. We do not store, track, or share your exact location data with any third parties. By using this service, you consent to our use of location data for functionality and our partner networks for personalized advertisements.",
         footer_about: "About", footer_privacy: "Privacy", clean_hours: "clean", rain_risk: "Rain risk",
         dust_warning: "⚠️ Extreme dust warning — avoid washing your car until conditions improve",
         no_window: "⛔ No good wash window this week — check back later",
@@ -111,7 +111,7 @@ const i18n = {
         prod_washer: "Pressure Washer", prod_washer_desc: "Effortlessly blast away dirt and grime.",
         prod_interior: "Interior Cleaner", prod_interior_desc: "Keep your dashboard and seats spotless.",
         prod_wheel: "Wheel Cleaner", prod_wheel_desc: "Dissolve brake dust for shiny rims.",
-        buy_on_amazon: "Buy on Amazon", share_text_template: "My Car Wash Score today is [SCORE]/100 🚗✨ Check yours at carwashforcast.com #CarWash #Weather",
+        buy_on_amazon: "Buy on Amazon", share_text_template: "My Car Wash Score today is [SCORE]/100 🚗✨ Check yours at carwashforecast.com #CarWash #Weather",
         subscribe_btn: "Get Daily Wash Score", subscribe_success: "You're subscribed! 🔔", log_wash_btn: "Log This Wash 💦",
         history_title: "Wash History", history_empty: "No washes logged yet.", history_reminder: "It's been 14 days since your last wash! 🚗"
       }
@@ -146,7 +146,7 @@ const i18n = {
       prod_washer: "Nettoyeur Haute Pression", prod_washer_desc: "Éliminez la saleté et la crasse sans effort.",
       prod_interior: "Nettoyant Intérieur", prod_interior_desc: "Gardez votre tableau de bord et vos sièges impeccables.",
       prod_wheel: "Nettoyant Jantes", prod_wheel_desc: "Dissout la poussière de frein pour des jantes brillantes.",
-      buy_on_amazon: "Acheter sur Amazon", share_text_template: "Mon score de lavage auto aujourd'hui est [SCORE]/100 🚗✨ Vérifiez le vôtre sur carwashforcast.com #LavageAuto #Météo",
+      buy_on_amazon: "Acheter sur Amazon", share_text_template: "Mon score de lavage auto aujourd'hui est [SCORE]/100 🚗✨ Vérifiez le vôtre sur carwashforecast.com #LavageAuto #Météo",
       subscribe_btn: "Recevoir le Score Quotidien", subscribe_success: "Vous êtes abonné ! 🔔", log_wash_btn: "Enregistrer ce Lavage 💦",
       history_title: "Historique de Lavage", history_empty: "Aucun lavage enregistré pour le moment.", history_reminder: "Cela fait 14 jours depuis votre dernier lavage ! 🚗"
     };
@@ -180,7 +180,7 @@ const i18n = {
       prod_washer: "Hidrolimpiadora", prod_washer_desc: "Elimina la suciedad y la mugre sin esfuerzo.",
       prod_interior: "Limpiador de Interiores", prod_interior_desc: "Mantén tu salpicadero y asientos impecables.",
       prod_wheel: "Limpiallantas", prod_wheel_desc: "Disuelve el polvo de frenos para llantas brillantes.",
-      buy_on_amazon: "Comprar en Amazon", share_text_template: "Mi puntuación de lavado hoy es [SCORE]/100 🚗✨ Comprueba la tuya en carwashforcast.com #LavadoAuto #Clima",
+      buy_on_amazon: "Comprar en Amazon", share_text_template: "Mi puntuación de lavado hoy es [SCORE]/100 🚗✨ Comprueba la tuya en carwashforecast.com #LavadoAuto #Clima",
       subscribe_btn: "Recibir Puntuación Diaria", subscribe_success: "¡Te has suscrito! 🔔", log_wash_btn: "Registrar este Lavado 💦",
       history_title: "Historial de Lavado", history_empty: "Aún no hay lavados registrados.", history_reminder: "¡Han pasado 14 días desde tu último lavado! 🚗"
     };
@@ -214,7 +214,7 @@ const i18n = {
       prod_washer: "Hochdruckreiniger", prod_washer_desc: "Müheloses Entfernen von Schmutz und Dreck.",
       prod_interior: "Innenraumreiniger", prod_interior_desc: "Halten Sie Armaturenbrett und Sitze makellos.",
       prod_wheel: "Felgenreiniger", prod_wheel_desc: "Löst Bremsstaub für glänzende Felgen.",
-      buy_on_amazon: "Bei Amazon kaufen", share_text_template: "Mein Autowaschergebnis heute ist [SCORE]/100 🚗✨ Prüfe deins auf carwashforcast.com #Autowäsche #Wetter",
+      buy_on_amazon: "Bei Amazon kaufen", share_text_template: "Mein Autowaschergebnis heute ist [SCORE]/100 🚗✨ Prüfe deins auf carwashforecast.com #Autowäsche #Wetter",
       subscribe_btn: "Tägliche Waschbewertung erhalten", subscribe_success: "Du bist abonniert! 🔔", log_wash_btn: "Diese Wäsche protokollieren 💦",
       history_title: "Waschhistorie", history_empty: "Noch keine Wäschen protokolliert.", history_reminder: "Es ist 14 Tage her seit deiner letzten Wäsche! 🚗"
     };
@@ -248,7 +248,7 @@ const i18n = {
       prod_washer: "Basınçlı Yıkama Makinesi", prod_washer_desc: "Kir ve çamuru zahmetsizce temizler.",
       prod_interior: "İç Temizleyici", prod_interior_desc: "Ön panelinizi ve koltuklarınızı tertemiz tutar.",
       prod_wheel: "Jant Temizleyici", prod_wheel_desc: "Parlak jantlar için fren tozunu çözer.",
-      buy_on_amazon: "Amazon'dan Satın Al", share_text_template: "Bugünkü araba yıkama skorum [SCORE]/100 🚗✨ Seninkini kontrol et carwashforcast.com #ArabaYıkama #Hava",
+      buy_on_amazon: "Amazon'dan Satın Al", share_text_template: "Bugünkü araba yıkama skorum [SCORE]/100 🚗✨ Seninkini kontrol et carwashforecast.com #ArabaYıkama #Hava",
       subscribe_btn: "Günlük Yıkama Puanını Al", subscribe_success: "Abone oldunuz! 🔔", log_wash_btn: "Bu Yıkamayı Kaydet 💦",
       history_title: "Yıkama Geçmişi", history_empty: "Henüz kayıtlı yıkama yok.", history_reminder: "Son yıkamanızdan bu yana 14 gün geçti! 🚗"
     };
