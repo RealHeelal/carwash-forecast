@@ -23,6 +23,7 @@
   <meta name="twitter:description" content="Free real-time car wash weather forecast. Avoid wasting money washing before rain!" />
   <meta name="twitter:image" content="https://www.carwashforecast.com/og-image.jpg" />
 
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E">
   <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#3b82f6" />
   <meta name="mobile-web-app-capable" content="yes" />
@@ -54,7 +55,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300..700&display=swap" rel="stylesheet"></noscript>
 
   <style>
     :root, [data-theme="light"] {
@@ -72,13 +76,13 @@
       --color-primary: oklch(0.52 0.17 230);
       --color-primary-hover: oklch(0.42 0.17 230);
       --color-primary-highlight: oklch(0.94 0.04 230);
-      --color-yes: oklch(0.62 0.17 145);
+      --color-yes: oklch(0.52 0.15 145);
       --color-yes-bg: oklch(0.97 0.03 145);
-      --color-wait: oklch(0.68 0.16 75);
+      --color-wait: oklch(0.50 0.12 75);
       --color-wait-bg: oklch(0.97 0.03 75);
       --color-no: oklch(0.55 0.18 25);
       --color-no-bg: oklch(0.97 0.03 25);
-      --color-caution: oklch(0.70 0.15 55);
+      --color-caution: oklch(0.55 0.14 55);
       --color-caution-bg: oklch(0.97 0.03 55);
       --color-surface-dynamic: rgba(0,0,0,0.1);
       --radius-sm: 0.375rem; --radius-md: 0.5rem;
@@ -243,6 +247,16 @@
     .adsbygoogle { display: block !important; min-height: 100px; width: 100%; }
   </style>
 
+  <script>
+    // Init an ad slot only once it has width (avoids "No slot size for availableWidth=0").
+    function pushAdWhenVisible(ins){
+      if(!ins) return;
+      var go=function(){ (window.adsbygoogle = window.adsbygoogle || []).push({}); };
+      if(ins.offsetWidth>0) return go();
+      var ro=new ResizeObserver(function(){ if(ins.offsetWidth>0){ ro.disconnect(); go(); } });
+      ro.observe(ins);
+    }
+  </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4045821311965688" crossorigin="anonymous"></script>
   </head>
 <body class="theme-clear">
@@ -341,14 +355,14 @@
         </div>
       </div>
 
-      <div class="ad-container ad-leaderboard" aria-label="Advertisement">
+      <div class="ad-container ad-leaderboard" role="complementary" aria-label="Advertisement">
         <ins class="adsbygoogle"
      style="display:block;min-height:100px;width:100%;"
      data-ad-client="ca-pub-4045821311965688"
      data-ad-slot="3035863077"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>pushAdWhenVisible(document.currentScript.previousElementSibling);</script>
       </div>
 
       <div class="risk-grid">
@@ -371,14 +385,14 @@
 
       <div class="forecast-strip" id="forecast-strip"></div>
 
-      <div class="ad-container ad-rectangle" aria-label="Advertisement" style="max-height: 120px; min-height: 120px;">
+      <div class="ad-container ad-rectangle" role="complementary" aria-label="Advertisement" style="max-height: 120px; min-height: 120px;">
         <ins class="adsbygoogle"
      style="display:block;min-height:100px;width:100%;"
      data-ad-client="ca-pub-4045821311965688"
      data-ad-slot="3035863077"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>pushAdWhenVisible(document.currentScript.previousElementSibling);</script>
       </div>
 
       <div class="best-day-card glass-card">
@@ -588,14 +602,14 @@
     </footer>
   </div>
 
-  <div class="ad-container ad-sticky-footer" aria-label="Advertisement">
+  <div class="ad-container ad-sticky-footer" role="complementary" aria-label="Advertisement">
     <ins class="adsbygoogle"
      style="display:block;min-height:100px;width:100%;"
      data-ad-client="ca-pub-4045821311965688"
      data-ad-slot="3035863077"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <script>pushAdWhenVisible(document.currentScript.previousElementSibling);</script>
   </div>
 
   <script src="./translations.js"></script>
